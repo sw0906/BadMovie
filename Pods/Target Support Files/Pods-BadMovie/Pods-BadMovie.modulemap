@@ -1,0 +1,6 @@
+framework module Pods_BadMovie {
+  umbrella header "Pods-BadMovie-umbrella.h"
+
+  export *
+  module * { export * }
+}
