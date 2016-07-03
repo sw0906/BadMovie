@@ -8,6 +8,8 @@
 
 import UIKit
 import Kingfisher
+import SDWebImage
+
 
 class BMTableViewCell: UITableViewCell {
     
@@ -16,6 +18,7 @@ class BMTableViewCell: UITableViewCell {
     @IBOutlet weak var rateView: UIView!
     @IBOutlet weak var rateLabel: UILabel!
     @IBOutlet weak var rateNumberLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,9 +36,17 @@ class BMTableViewCell: UITableViewCell {
     
     
     func bindMovie(movie: MovieItem) {
-        movieImage.kf_setImageWithURL(movie.getBackdropUrl())
+        self.movieImage.sd_setImageWithURL(movie.getBackdropUrl())
+//        self.movieImage.contentMode = UIViewContentMode.ScaleToFill
+    
         rateLabel.text = movie.vote_average
         rateNumberLabel.text = movie.vote_count
+    }
+ 
+    
+    func setupTextColor(color: UIColor)
+    {
+    
     }
     
 }

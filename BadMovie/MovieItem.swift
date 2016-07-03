@@ -31,17 +31,17 @@ import UIKit
 import SwiftyJSON
 
 class MovieItem: NSObject {
-    var movieId:String? = nil
+    var movieId:String!
     var title:String!
     var original_language:String? = nil
     var genre_ids:Array<Int>? = nil
     
-    var backdrop_path:String? = nil
-    var poster_path:String? = nil
+    var backdrop_path:String!
+    var poster_path:String!
     var overview:String? = nil
     
-    var vote_count:String? = nil
-    var vote_average:String? = nil
+    var vote_count:String!
+    var vote_average:String!
     var popularity:String? = nil
     
     var video:NSURL? = nil
@@ -49,6 +49,7 @@ class MovieItem: NSObject {
     
     let imagePath = "http://image.tmdb.org/t/p/w500/"
 
+    var videoYoutubeKey:String? = nil
     
     init(dic: JSON) {
         movieId = dic["id"].stringValue
@@ -75,6 +76,7 @@ class MovieItem: NSObject {
         release_date = dic["release_date"].stringValue
     }
     
+
     
     func getReleaseDate() -> NSDate {
         let dateFormatter = NSDateFormatter()
@@ -83,11 +85,13 @@ class MovieItem: NSObject {
     }
     
     func getBackdropUrl() -> NSURL {
-        return NSURL(string: imagePath+backdrop_path!)!
+        let path: String = imagePath + backdrop_path!
+        return NSURL(string: path)!
     }
     
     func getPosterUrl() -> NSURL {
-        return NSURL(string: imagePath+poster_path!)!
+        let path: String = imagePath + poster_path!
+        return NSURL(string: path)!
     }
     
 }

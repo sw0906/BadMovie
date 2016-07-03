@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BadMovie/MovieItem.swift"
-            timestampString = "489148476.422412"
+            timestampString = "489239712.913678"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "init(dic:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -166,16 +166,141 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BadMovie/BMRequestManager.swift"
+            timestampString = "489239712.913678"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "parseGenre(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BadMovie/BMMainTableViewController.swift"
-            timestampString = "489171171.759808"
+            timestampString = "489234632.873972"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "BMMainTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BadMovie.BMMainTableViewController.comboxViewGenre.getter : Swift.ImplicitlyUnwrappedOptional&lt;BadMovie.SWComboxView&gt;"
+                  moduleName = "BadMovie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sw/Desktop/BadMovie/BadMovie/BMMainTableViewController.swift"
+                  timestampString = "489234634.250118"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BadMovie.BMMainTableViewController.comboxViewGenre.setter : Swift.ImplicitlyUnwrappedOptional&lt;BadMovie.SWComboxView&gt;"
+                  moduleName = "BadMovie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sw/Desktop/BadMovie/BadMovie/BMMainTableViewController.swift"
+                  timestampString = "489234634.250258"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BadMovie.BMMainTableViewController.init (style : __C.UITableViewStyle) -&gt; BadMovie.BMMainTableViewController"
+                  moduleName = "BadMovie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sw/Desktop/BadMovie/BadMovie/BMMainTableViewController.swift"
+                  timestampString = "489234634.250385"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BadMovie.BMMainTableViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; BadMovie.BMMainTableViewController"
+                  moduleName = "BadMovie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sw/Desktop/BadMovie/BadMovie/BMMainTableViewController.swift"
+                  timestampString = "489234634.250515"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "374">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BadMovie.BMMainTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;BadMovie.BMMainTableViewController&gt;"
+                  moduleName = "BadMovie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sw/Desktop/BadMovie/BadMovie/BMMainTableViewController.swift"
+                  timestampString = "489234634.250648"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "284">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BadMovie/BMMainTableViewController.swift"
+            timestampString = "489234847.312936"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "startRequest()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BadMovie/BMDetailController.swift"
+            timestampString = "489241635.571435"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "playerView(_:didChangeToState:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

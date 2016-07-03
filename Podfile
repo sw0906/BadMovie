@@ -21,6 +21,8 @@ pod 'SVProgressHUD'
 pod 'FontAwesomeKit'
 pod 'youtube-ios-player-helper', '~> 0.1.4'
 pod 'MJRefresh'
+pod 'FontAwesomeIconFactory'
+pod 'SDWebImage'
 
 end
 

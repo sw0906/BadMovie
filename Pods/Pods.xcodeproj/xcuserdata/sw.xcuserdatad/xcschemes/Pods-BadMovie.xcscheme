@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0C88A95328FDF6B48FD71628'
+               BlueprintIdentifier = '330A8A53CC0CE8010D64B1FF'
                BlueprintName = 'Pods-BadMovie'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_BadMovie.framework'>
