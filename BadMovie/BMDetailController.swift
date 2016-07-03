@@ -71,7 +71,7 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
         super.viewDidLoad()
         
         if Reachability.isConnectedToNetwork() {
-//            wifiText.hidden = true
+            wifiText.hidden = true
         }
         else
         {
