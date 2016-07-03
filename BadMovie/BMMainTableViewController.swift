@@ -12,6 +12,7 @@ import SwiftyJSON
 import FontAwesomeKit
 import FontAwesomeIconFactory
 import MJRefresh
+import SVProgressHUD
 
 
 class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
@@ -148,7 +149,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
         self.tableView.reloadSections(NSIndexSet(indexesInRange: NSMakeRange(0, 1)), withRowAnimation: UITableViewRowAnimation.Automatic)
     }
     
-
+    
     
     //MARK: - Request
     func startGetGenreList() {
@@ -176,6 +177,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     
     func startRequest()
     {
+        SVProgressHUD.showWithStatus("Loading")
         pageNumber = 1
         refreshControl?.beginRefreshing()
         let api = BMRequestManager.sharedInstance.discovery
@@ -202,6 +204,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
                 case .Failure(let error):
                     print(error)
                 }
+                SVProgressHUD.dismiss()
         }
     }
     
@@ -345,7 +348,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
                 viewController.movieItem = sender as! MovieItem
             }
         }
-
+        
     }
     
     

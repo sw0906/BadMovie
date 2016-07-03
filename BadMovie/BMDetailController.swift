@@ -13,6 +13,7 @@ import SwiftyJSON
 import FontAwesomeKit
 import FontAwesomeIconFactory
 import SystemConfiguration
+import SVProgressHUD
 
 
 public class Reachability {
@@ -41,13 +42,28 @@ public class Reachability {
 
 
 
-
-
 class BMDetailController: UIViewController, YTPlayerViewDelegate {
 
     @IBOutlet weak var playView: YTPlayerView!
     
     @IBOutlet weak var wifiText: UILabel!
+    
+    @IBOutlet weak var movieImageView: UIImageView!
+    
+    @IBOutlet weak var playSlide: UISlider!
+    
+    @IBOutlet weak var rateView: UIView!
+    @IBOutlet weak var rateLabel: UILabel!
+    @IBOutlet weak var rateNumberLabel: UILabel!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var GenreLabel: UILabel!
+    
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var starImageView: UIImageView!
+    @IBOutlet weak var peopleImageView: UIImageView!
+    
     
     var movieItem:MovieItem!
     
@@ -62,8 +78,43 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
             wifiText.hidden = false
         }
         
+        movieImageView.kf_setImageWithURL(movieItem.getBackdropUrl())
+        
+        hiddeImageView(true)
+        setupRateView()
+        setupData()
         startRequestVideo()
-        // Do any additional setup after loading the view.
+    }
+    
+    func setupRateView() {
+        rateView.layer.borderWidth = 2.0
+        rateView.layer.cornerRadius = 3.0
+        rateView.layer.borderColor = UIColor.whiteColor().CGColor
+        rateView.clipsToBounds = true
+        
+        let fac:NIKFontAwesomeIconFactory = NIKFontAwesomeIconFactory.buttonIconFactory()
+        starImageView.image = fac.createImageForIcon(NIKFontAwesomeIcon.Star)
+        peopleImageView.image = fac.createImageForIcon(NIKFontAwesomeIcon.User)
+        
+        
+//        var cogIcon: FAKFontAwesome = FAKFontAwesome.starIconWithSize(20)
+//        starImageView.image = cogIcon.imageWithSize(CGSize(width: 20, height: 20))
+//        
+//        cogIcon = FAKFontAwesome.userIconWithSize(15)
+//        peopleImageView.image = cogIcon.imageWithSize(CGSize(width: 15, height: 15))
+    }
+    func setupData()
+    {
+        rateLabel.text = movieItem.vote_average
+        rateNumberLabel.text = movieItem.vote_count
+        GenreLabel.text = movieItem.getGenreName()
+        infoLabel.text = movieItem.overview
+        titleLabel.text = movieItem.getTitleString()
+    }
+    
+    func hiddeImageView(hide: Bool)
+    {
+        movieImageView.hidden = hide
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,6 +140,10 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
                         {
                             self.setupYoutube(videos[0].key)
                         }
+                        else
+                        {
+                            self.hiddeImageView(false)
+                        }
                     }
                     print("Validation Successful")
                     
@@ -104,17 +159,6 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
         let dic = ["controls" : (0), "playsinline" : (1), "autohide" : (1), "showinfo" : (0), "modestbranding" : (1)];
         playView.delegate = self
         playView.loadWithVideoId(youtubeKey, playerVars: dic)
-        
-
-//        NSDictionary *playerVars = @{
-//            @"controls" : @0,
-//            @"playsinline" : @1,
-//            @"autohide" : @1,
-//            @"showinfo" : @0,
-//            @"modestbranding" : @1
-//        };
-//        self.playerView.delegate = self;
-//        [self.playerView loadWithVideoId:videoId playerVars:playerVars];
     }
     
     
@@ -124,8 +168,22 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
     
     func playerView(playerView: YTPlayerView, didChangeToState state: YTPlayerState)
     {
-        wifiText.hidden = true
+        if state == YTPlayerState.Playing {
+            wifiText.hidden = true
+        }
     }
+    
+    func playerView(playerView: YTPlayerView, didPlayTime playTime: Float) {
+        let  interval = playView.duration()
+        let dur = Double(playTime)/interval
+        self.playSlide.value = Float(dur)
+    }
+    
+    @IBAction func onSliderChange(sender: UISlider) {
+        let  seekToTime = self.playView.duration() *  Double( self.playSlide.value)
+        playView.seekToSeconds(Float(seekToTime), allowSeekAhead: true)
+    }
+
     
 
     /*

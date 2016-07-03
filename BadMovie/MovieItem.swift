@@ -34,7 +34,7 @@ class MovieItem: NSObject {
     var movieId:String!
     var title:String!
     var original_language:String? = nil
-    var genre_ids:Array<Int>? = nil
+    var genre_ids:Array<String>? = nil
     
     var backdrop_path:String!
     var poster_path:String!
@@ -57,9 +57,9 @@ class MovieItem: NSObject {
         original_language = dic["original_language"].stringValue
         
         if let genre_idsJson = dic["genre_ids"].array {
-            genre_ids = Array<Int>()
+            genre_ids = Array<String>()
             for genreId in genre_idsJson {
-                genre_ids?.append(genreId.int!)
+                genre_ids?.append(genreId.stringValue)
             }
         }
 
@@ -92,6 +92,36 @@ class MovieItem: NSObject {
     func getPosterUrl() -> NSURL {
         let path: String = imagePath + poster_path!
         return NSURL(string: path)!
+    }
+    
+    func getGenresString()->String
+    {
+        var genreS: String = ""
+        for genre in genre_ids!
+        {
+            genreS += genre + " "
+        }
+        return genreS
+    }
+    
+    func getGenreName() -> String
+    {
+        var genreS: String = ""
+        let genreArray = BMRequestManager.sharedInstance.genres
+        for genreId in genre_ids! {
+            for genre in genreArray {
+                if genre.id == genreId {
+                     genreS += genre.name + " "
+                }
+            }
+        }
+        return genreS
+    }
+    
+    func getTitleString()->String
+    {
+        let titleS = title + " (" + release_date! + ")"
+        return titleS
     }
     
 }
