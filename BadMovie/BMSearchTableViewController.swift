@@ -8,16 +8,17 @@
 
 import UIKit
 
-class BMSearchTableViewController: UITableViewController {
+class BMSearchTableViewController: UITableViewController, UISearchBarDelegate {
 
+    @IBOutlet var searchBar: UISearchBar!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: navigationController, action: nil)
+        navigationItem.leftBarButtonItem = backButton
+        self.navigationItem.titleView = searchBar
+        searchBar.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +37,13 @@ class BMSearchTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
+    
+
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        self.navigationController?.popViewControllerAnimated(true)
+        
+    }
+    
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

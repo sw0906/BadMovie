@@ -13,6 +13,21 @@ import youtube_ios_player_helper
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var filterButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
+    
+    
+    
+    @IBAction func tapSearch(sender: AnyObject) {
+        
+        
+    }
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -31,27 +31,27 @@ import UIKit
 import SwiftyJSON
 
 class MovieItem: NSObject {
-    var movieId:Int!
+    var movieId:String? = nil
     var title:String!
     var original_language:String? = nil
     var genre_ids:Array<Int>? = nil
     
-    var backdrop_path:NSString? = nil
-    var poster_path:NSString? = nil
-    var overview:NSString? = nil
+    var backdrop_path:String? = nil
+    var poster_path:String? = nil
+    var overview:String? = nil
     
-    var vote_count:NSInteger!
-    var vote_average:Float = 0.0
-    var popularity:Float = 0.0
+    var vote_count:String? = nil
+    var vote_average:String? = nil
+    var popularity:String? = nil
     
     var video:NSURL? = nil
     var release_date:String? = nil
     
     let imagePath = "http://image.tmdb.org/t/p/w500/"
-    
+
     
     init(dic: JSON) {
-        movieId = dic["id"].int
+        movieId = dic["id"].stringValue
         title = dic["title"].stringValue
         original_language = dic["original_language"].stringValue
         
@@ -67,9 +67,9 @@ class MovieItem: NSObject {
         poster_path = dic["poster_path"].stringValue
         overview = dic["overview"].stringValue
         
-        vote_count = dic["vote_count"].int
-        vote_average = dic["vote_average"].float!
-        popularity = dic["id"].float!
+        vote_count = dic["vote_count"].stringValue
+        vote_average = dic["vote_average"].stringValue
+        popularity = dic["id"].stringValue
         
 //        video = NSURL dic["video"].stringValue
         release_date = dic["release_date"].stringValue
@@ -80,6 +80,14 @@ class MovieItem: NSObject {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"/* find out and place date format from http://userguide.icu-project.org/formatparse/datetime */
         return dateFormatter.dateFromString(release_date!)!
+    }
+    
+    func getBackdropUrl() -> NSURL {
+        return NSURL(string: imagePath+backdrop_path!)!
+    }
+    
+    func getPosterUrl() -> NSURL {
+        return NSURL(string: imagePath+poster_path!)!
     }
     
 }
