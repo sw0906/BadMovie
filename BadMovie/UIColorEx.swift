@@ -12,9 +12,9 @@ extension UIColor {
     
     class func globalPooRateColor(rate: CGFloat) -> UIColor
     {
-        let red  = 0.2 + 0.4 * rate
-        let green = 0.2 + 0.3 * rate
-        return UIColor(red: red, green: green, blue: 0.2, alpha: 1)
+        let red  = 0.2 + 0.7 * rate
+        let green = 0.2 + 0.4 * rate
+        return UIColor(red: red, green: green, blue: 0.1, alpha: 1)
     }
     
     class func globalPooRateColor(rate: CGFloat, alpha: CGFloat) -> UIColor
