@@ -55,7 +55,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="159"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DE159B5B-5A85-4606-AD94-6CC2319E83A7" translatesAutoresizingMaskIntoConstraints="NO" id="Hd4-Bc-d7i">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="550632E2-EAF5-415B-9504-38518F3DE07D" translatesAutoresizingMaskIntoConstraints="NO" id="Hd4-Bc-d7i">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="159"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="159" id="jIY-6p-pL0"/>
@@ -124,7 +124,7 @@
                                     </constraints>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="IW6-72-M1S" firstAttribute="leading" secondItem="cmL-Xi-34Q" secondAttribute="leading" constant="20" id="3hM-kY-JUJ"/>
                                 <constraint firstAttribute="height" constant="40" id="F00-1W-Awa"/>
@@ -145,9 +145,10 @@
                                 <constraint firstAttribute="width" constant="284" id="maN-d6-Nbr"/>
                             </constraints>
                             <segments>
-                                <segment title="Poo "/>
                                 <segment title="Poo Poo"/>
+                                <segment title="Poo"/>
                             </segments>
+                            <color key="tintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="0cW-2N-3Qf"/>
@@ -162,7 +163,6 @@
                             </connections>
                         </segmentedControl>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="e9A-Cs-bkC" firstAttribute="top" secondItem="cmL-Xi-34Q" secondAttribute="bottom" constant="8" id="8gG-Pd-Y0V"/>
                         <constraint firstAttribute="bottom" secondItem="e9A-Cs-bkC" secondAttribute="bottom" constant="10" id="a3f-Oi-eXz"/>
@@ -396,7 +396,7 @@
                                     </constraints>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="CBk-qE-Xzn"/>
                                 <constraint firstItem="3Rs-iA-TFw" firstAttribute="leading" secondItem="cjY-cO-JRo" secondAttribute="leading" constant="20" id="G0z-kQ-XU8"/>
@@ -417,9 +417,10 @@
                                 <constraint firstAttribute="width" constant="284" id="auO-r1-ftD"/>
                             </constraints>
                             <segments>
-                                <segment title="Poo "/>
                                 <segment title="Poo Poo"/>
+                                <segment title="Poo"/>
                             </segments>
+                            <color key="tintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="Hvr-7S-XIm"/>
@@ -430,11 +431,11 @@
                                 </mask>
                             </variation>
                             <connections>
+                                <action selector="tapSort:" destination="fNP-sh-JJ4" eventType="valueChanged" id="cOn-1P-Tbz"/>
                                 <action selector="tapSort:" destination="jGz-lz-oR2" eventType="valueChanged" id="l5a-LH-CxH"/>
                             </connections>
                         </segmentedControl>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="ZR5-Ok-3ip" secondAttribute="bottom" constant="10" id="Abz-he-yDg"/>
                         <constraint firstItem="cjY-cO-JRo" firstAttribute="leading" secondItem="av1-7g-D2A" secondAttribute="leading" id="TZf-FE-qME"/>
@@ -508,7 +509,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="DE159B5B-5A85-4606-AD94-6CC2319E83A7" width="250" height="140">
+        <image name="550632E2-EAF5-415B-9504-38518F3DE07D" width="250" height="140">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

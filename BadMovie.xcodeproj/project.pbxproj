@@ -17,6 +17,7 @@
 		D0189FB91D292A1500CEC47C /* BMDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0189FB81D292A1500CEC47C /* BMDetailController.swift */; };
 		D0189FBC1D29650100CEC47C /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0189FBA1D29650100CEC47C /* TestCell.swift */; };
 		D0189FBD1D29650100CEC47C /* TestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0189FBB1D29650100CEC47C /* TestCell.xib */; };
+		D0189FBF1D297F6800CEC47C /* UIColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0189FBE1D297F6800CEC47C /* UIColorEx.swift */; };
 		D03E989D1D29171500AD5B47 /* icn-dropdown.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D03E98941D29171500AD5B47 /* icn-dropdown.pdf */; };
 		D03E989E1D29171500AD5B47 /* SWComboxCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03E98951D29171500AD5B47 /* SWComboxCountry.swift */; };
 		D03E989F1D29171500AD5B47 /* SWComboxCountry.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03E98961D29171500AD5B47 /* SWComboxCountry.xib */; };
@@ -49,6 +50,7 @@
 		D0189FB81D292A1500CEC47C /* BMDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMDetailController.swift; sourceTree = "<group>"; };
 		D0189FBA1D29650100CEC47C /* TestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
 		D0189FBB1D29650100CEC47C /* TestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCell.xib; sourceTree = "<group>"; };
+		D0189FBE1D297F6800CEC47C /* UIColorEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorEx.swift; sourceTree = "<group>"; };
 		D03E98941D29171500AD5B47 /* icn-dropdown.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "icn-dropdown.pdf"; path = "BadMovie/Combox/icn-dropdown.pdf"; sourceTree = "<group>"; };
 		D03E98951D29171500AD5B47 /* SWComboxCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SWComboxCountry.swift; path = BadMovie/Combox/SWComboxCountry.swift; sourceTree = "<group>"; };
 		D03E98961D29171500AD5B47 /* SWComboxCountry.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SWComboxCountry.xib; path = BadMovie/Combox/SWComboxCountry.xib; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				D0B2C2631D2820FD002CD93F /* BMRequestManager.swift */,
+				D0189FBE1D297F6800CEC47C /* UIColorEx.swift */,
 			);
 			name = Categrory;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				D0B2C25D1D27FB67002CD93F /* BMMainTableViewController.swift in Sources */,
 				D03E98A11D29171500AD5B47 /* SWComboxTitle.swift in Sources */,
 				D0B2C2611D2803F4002CD93F /* BMTableViewCell.swift in Sources */,
+				D0189FBF1D297F6800CEC47C /* UIColorEx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

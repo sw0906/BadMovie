@@ -117,6 +117,10 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
         GenreLabel.text = movieItem.getGenreName()
         infoLabel.text = movieItem.overview
         titleLabel.text = movieItem.getTitleString()
+        
+        let score = Float( movieItem.vote_average)
+        let rate = CGFloat(score!) * 0.1
+        view.backgroundColor = UIColor.globalPooRateColor(rate)
     }
     
     func hiddeImageView(hide: Bool)
@@ -158,10 +162,12 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
                 case .Failure(let error):
                     print(error)
                 }
+                SVProgressHUD.dismiss()
         }
     }
     
     
+    //MARK: - video
     func setupYoutube(youtubeKey: String)
     {
         let dic = ["controls" : (0), "playsinline" : (1), "autohide" : (1), "showinfo" : (0), "modestbranding" : (1)];

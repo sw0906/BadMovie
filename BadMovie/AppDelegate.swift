@@ -23,6 +23,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                                                  andContentStyle: UIContentStyle.Light)
         
 //        Chameleon.setGlobalThemeUsingPrimaryColor(FlatPink(), withContentStyle: UIContentStyle.Light)
+        
+        // Changing the status bar's colour to white
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
+        // Changing the navigation controller's background colour
+        UINavigationBar.appearance().barTintColor = UIColor.globalPooColor(1)//UIColor.redColor()
+        
+        // Changing the navigation controller's title colour
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        // Changing the colour of the bar button items
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        
+        // Changing the tint colour of the tab bar icons
+        UITabBar.appearance().tintColor = UIColor.yellowColor()
+
+        
+        
         return true
     }
     

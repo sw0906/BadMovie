@@ -128,10 +128,10 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
         switch sender.selectedSegmentIndex
         {
         case 0:
-            sortType = .Poo
+            sortType = .PooPoo
             break
         case 1:
-            sortType = .PooPoo
+            sortType = .Poo
         default:
             break;
         }
