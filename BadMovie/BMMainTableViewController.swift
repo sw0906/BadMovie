@@ -145,6 +145,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     
     func tapFilter()
     {
+        gotoTop()
         sectionHight = sectionHight == 0 ? 86 : 0
         self.tableView.reloadSections(NSIndexSet(indexesInRange: NSMakeRange(0, 1)), withRowAnimation: UITableViewRowAnimation.Automatic)
     }
@@ -407,7 +408,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     
     func tapComboxToOpenTable(combox: SWComboxView)
     {
-        
+        gotoTop()
     }
     
     func gotoTop() {

@@ -279,11 +279,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BadMovie/BMMainTableViewController.swift"
-            timestampString = "489258445.066692"
+            timestampString = "489262575.194378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "startRequest()"
             landmarkType = "5">
          </BreakpointContent>
@@ -311,11 +311,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BadMovie/BMMainTableViewController.swift"
-            timestampString = "489258445.066692"
+            timestampString = "489262575.194378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "371"
-            endingLineNumber = "371"
+            startingLineNumber = "372"
+            endingLineNumber = "372"
             landmarkName = "setupComboxGenre()"
             landmarkType = "5">
          </BreakpointContent>
@@ -391,11 +391,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BadMovie/BMMainTableViewController.swift"
-            timestampString = "489258445.066692"
+            timestampString = "489262575.194378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "startRequest()"
             landmarkType = "5">
          </BreakpointContent>

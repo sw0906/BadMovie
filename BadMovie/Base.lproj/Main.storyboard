@@ -55,7 +55,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="159"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="34F0A088-9A98-4152-83DE-B95729497C4C" translatesAutoresizingMaskIntoConstraints="NO" id="Hd4-Bc-d7i">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2A99FB06-F912-4F62-900F-F81DC5752098" translatesAutoresizingMaskIntoConstraints="NO" id="Hd4-Bc-d7i">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="159"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="159" id="jIY-6p-pL0"/>
@@ -238,7 +238,7 @@
                                 </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZi-wq-LKc">
-                                <rect key="frame" x="20" y="447" width="553" height="34"/>
+                                <rect key="frame" x="20" y="447" width="553" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="kQi-sg-XpN"/>
                                 </constraints>
@@ -308,7 +308,8 @@
                             <constraint firstItem="DJB-zc-ayL" firstAttribute="top" secondItem="GEL-QC-90e" secondAttribute="bottom" constant="6" id="app-xy-ncT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DJB-zc-ayL" secondAttribute="trailing" constant="8" id="b9c-aj-tHR"/>
                             <constraint firstItem="GEL-QC-90e" firstAttribute="top" secondItem="kXh-6x-CEK" secondAttribute="bottom" constant="28" id="geb-vS-aQk"/>
-                            <constraint firstItem="oP8-EB-N9D" firstAttribute="top" relation="lessThanOrEqual" secondItem="aZi-wq-LKc" secondAttribute="bottom" constant="119" id="o20-sw-3EC"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="GEL-QC-90e" secondAttribute="trailing" constant="10" id="jpd-Jn-X62"/>
+                            <constraint firstItem="oP8-EB-N9D" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aZi-wq-LKc" secondAttribute="bottom" constant="10" id="o20-sw-3EC"/>
                             <constraint firstItem="aZi-wq-LKc" firstAttribute="leading" secondItem="RnZ-40-KjN" secondAttribute="leadingMargin" id="o88-AG-Zcy"/>
                             <constraint firstItem="aZi-wq-LKc" firstAttribute="top" secondItem="DJB-zc-ayL" secondAttribute="bottom" constant="16" id="szo-F9-mMG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Gf0-SR-8e8" secondAttribute="trailing" constant="-20" id="wE5-zo-fGi"/>
@@ -509,7 +510,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="34F0A088-9A98-4152-83DE-B95729497C4C" width="250" height="140">
+        <image name="2A99FB06-F912-4F62-900F-F81DC5752098" width="250" height="140">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
