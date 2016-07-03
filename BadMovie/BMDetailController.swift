@@ -97,12 +97,19 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
         peopleImageView.image = fac.createImageForIcon(NIKFontAwesomeIcon.User)
         
         
+        starImageView.image = starImageView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        starImageView.tintColor = UIColor.whiteColor()
+        
+        peopleImageView.image = peopleImageView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        peopleImageView.tintColor = UIColor.whiteColor()
+        
 //        var cogIcon: FAKFontAwesome = FAKFontAwesome.starIconWithSize(20)
 //        starImageView.image = cogIcon.imageWithSize(CGSize(width: 20, height: 20))
 //        
 //        cogIcon = FAKFontAwesome.userIconWithSize(15)
 //        peopleImageView.image = cogIcon.imageWithSize(CGSize(width: 15, height: 15))
     }
+    
     func setupData()
     {
         rateLabel.text = movieItem.vote_average
@@ -125,6 +132,7 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
 
     
     func startRequestVideo() {
+        SVProgressHUD.showWithStatus("Loading")
         let api = BMRequestManager.sharedInstance.videoApi(movieItem.movieId)
         Alamofire.request(.GET, api)
             .validate()
@@ -164,6 +172,7 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
     
     func playerViewDidBecomeReady(playerView: YTPlayerView)
     {
+        SVProgressHUD.dismiss()
     }
     
     func playerView(playerView: YTPlayerView, didChangeToState state: YTPlayerState)

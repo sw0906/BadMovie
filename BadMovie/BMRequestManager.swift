@@ -95,7 +95,7 @@ class BMRequestManager {
         let movieItems = json["genres"].array
         var results = Array<Genre>()
         for item in movieItems! {
-            print("movie type is = \(item.description)\n")
+//            print("movie type is = \(item.description)\n")
             let genreId = item["id"].stringValue
             let name = item["name"].stringValue
             let  genre =  Genre(id: genreId, name: name)
@@ -140,24 +140,16 @@ class BMRequestManager {
         return genreOps
     }
     
-    
-//    func discoveryApi(number: Int, sortType: SortType, key: String, genre: String, year: String) -> String
-//    {
-//        
-//        let sortString = (sortType == .Poo) ? "vote_count.asc" : "vote_count.desc"
-//        let path = discovery + "?page=" + String(number) + "&sort_by=" + sortString + "&year=" + year + "&with_genres=" + genre + "&with_keywords=" + key + "&api_key=929a1bc82174d488c8fe8478baf7a6fe"
-//        print(path)
-//        return path
-//    }
+
     func discoveryParams(number: Int, sortType: SortType, key: String, genre: String, year: String) -> [String:AnyObject]
     {
-        let sortString = (sortType == .Poo) ? "vote_count.asc" : "vote_count.desc"
+        let sortString = (sortType == .PooPoo) ? "vote_count.asc" : "vote_count.desc"
         
         if year == "" {
             let dic = ["page":String(number),
                        "sort_by" : sortString,
                        "with_keywords":key,
-                       "with_genres": genre,
+//                       "with_genres": genre,
                        "api_key": "929a1bc82174d488c8fe8478baf7a6fe"]
             return dic
         }

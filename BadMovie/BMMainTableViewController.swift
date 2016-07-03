@@ -38,26 +38,8 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     
     @IBOutlet weak var sortSegmentedControl: UISegmentedControl!
     
-    @IBOutlet var headerView: UIView!
     
-    @IBAction func tapSort(sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex
-        {
-        case 0:
-            sortType = .PooPoo
-            break
-        case 1:
-            sortType = .Poo
-            print("tap 2")
-        default:
-            break;
-        }
-        startRequest()
-    }
-    
-    
-    
-    //    var genres:[Genre]!
+
     
     var pageNumber:Int = 1;
     
@@ -71,6 +53,10 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
             let value = 2016 - i + 1920
             yearNumbers.append(String(value))
         }
+        setup()
+    }
+    
+    func setup() {
         setupNav()
         setupTableView()
         startGetGenreList()
@@ -86,9 +72,13 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
         }
     }
     
-    private func setupNav()
+    func setupNav()
     {
-        
+        addFilter()
+        addSearch()
+    }
+    
+    func addSearch() {
         let fac:NIKFontAwesomeIconFactory = NIKFontAwesomeIconFactory.barButtonItemIconFactory()
         let searchItem:UIBarButtonItem = UIBarButtonItem()
         searchItem.image = fac.createImageForIcon(NIKFontAwesomeIcon.Search)
@@ -97,14 +87,17 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
         searchItem.enabled = true
         searchItem.style = UIBarButtonItemStyle.Done
         
-        //        let filterItem:UIBarButtonItem = UIBarButtonItem()
+        navItem.rightBarButtonItem = searchItem
+    }
+    
+    func addFilter()
+    {
+        let fac:NIKFontAwesomeIconFactory = NIKFontAwesomeIconFactory.barButtonItemIconFactory()
         filterItem.image = fac.createImageForIcon(NIKFontAwesomeIcon.Filter)
         filterItem.action = #selector(BMMainTableViewController.tapFilter)
         filterItem.target = self
         filterItem.enabled = false
         filterItem.style = UIBarButtonItemStyle.Done
-        
-        navItem.rightBarButtonItem = searchItem
         navItem.leftBarButtonItem = filterItem
         
         navItem.title = "Bad Movie"
@@ -119,25 +112,32 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     }
     
     
-    private func setupTableView()
+    func setupTableView()
     {
-        //        tableView.tableHeaderView = sortView
-        let nib = UINib(nibName: "BMTableViewCell", bundle: NSBundle.mainBundle())
-        tableView.registerNib(nib, forCellReuseIdentifier: "BMTableViewCell")
-        
-        
-        tableView.registerClass(BMCell.classForCoder(), forCellReuseIdentifier: "BMCell")
-        
-        //        tableView.addSubview(headerView)
-        //        tableView.reloadData()
-        //        tableView.rowHeight = UITableViewAutomaticDimension
-        //        tableView.estimatedRowHeight = 160
+//        let nib = UINib(nibName: "BMTableViewCell", bundle: NSBundle.mainBundle())
+//        tableView.registerNib(nib, forCellReuseIdentifier: "BMTableViewCell")
+        let testNib = UINib(nibName: "TestCell", bundle: NSBundle.mainBundle())
+        tableView.registerNib(testNib, forCellReuseIdentifier: "TestCell")
     }
     
     
     
     
     //MARK: - Tap
+    @IBAction func tapSort(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex
+        {
+        case 0:
+            sortType = .Poo
+            break
+        case 1:
+            sortType = .PooPoo
+        default:
+            break;
+        }
+        startRequest()
+    }
+    
     func tapSearch()
     {
         performSegueWithIdentifier("toSearch", sender: nil)
@@ -153,6 +153,9 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     
     //MARK: - Request
     func startGetGenreList() {
+        if BMRequestManager.sharedInstance.genres.count > 0 {
+            return
+        }
         let api = BMRequestManager.sharedInstance.genreApi
         Alamofire.request(.GET, api)
             .validate()
@@ -177,6 +180,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     
     func startRequest()
     {
+        gotoTop()
         SVProgressHUD.showWithStatus("Loading")
         pageNumber = 1
         refreshControl?.beginRefreshing()
@@ -280,7 +284,9 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:BMTableViewCell = tableView.dequeueReusableCellWithIdentifier("BMTableViewCell", forIndexPath: indexPath) as! BMTableViewCell
+        //        let cell:BMTableViewCell = tableView.dequeueReusableCellWithIdentifier("BMTableViewCell", forIndexPath: indexPath) as! BMTableViewCell
+        
+        let cell:TestCell = tableView.dequeueReusableCellWithIdentifier("TestCell", forIndexPath: indexPath) as! TestCell
         let item = movies[indexPath.row]
         cell.bindMovie(item)
         //        let cell:BMCell = tableView.dequeueReusableCellWithIdentifier("BMCell", forIndexPath: indexPath) as! BMCell
@@ -303,6 +309,9 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
         let item = movies[indexPath.row]
         performSegueWithIdentifier("goDetail", sender: item)
     }
+    
+
+    
     
     /*
      // Override to support conditional editing of the table view.
@@ -377,7 +386,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     
     
     
-    //MARK: delegate
+    //MARK: - Combox delegate
     func selectedAtIndex(index:Int, combox: SWComboxView)
     {
         if combox == comboxViewGenre {
@@ -399,5 +408,9 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     func tapComboxToOpenTable(combox: SWComboxView)
     {
         
+    }
+    
+    func gotoTop() {
+        tableView.setContentOffset(CGPoint(x: 0, y: -70), animated:true)
     }
 }

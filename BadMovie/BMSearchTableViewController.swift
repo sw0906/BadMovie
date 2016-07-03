@@ -7,43 +7,68 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import FontAwesomeKit
+import FontAwesomeIconFactory
+import MJRefresh
+import SVProgressHUD
 
-class BMSearchTableViewController: UITableViewController, UISearchBarDelegate {
 
+class BMSearchTableViewController: BMMainTableViewController, UISearchBarDelegate {
+
+    
     @IBOutlet var searchBar: UISearchBar!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        searchBar.becomeFirstResponder()
+    }
+    
+    override func setup() {
+        setupNav()
+        setupTableView()
+        setupComboxGenre()
+        setupComboxYear()
+    }
+    
+    override func setupNav() {
         let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: navigationController, action: nil)
         navigationItem.leftBarButtonItem = backButton
         self.navigationItem.titleView = searchBar
-        searchBar.becomeFirstResponder()
+//        addFilter()
     }
-
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
     
-
+    //MARK: - Search Bar
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         self.navigationController?.popViewControllerAnimated(true)
         
     }
     
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String)
+    {
+        self.searchWords = searchText
+        startRequest()
+    }
+
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return  sortView
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 86
+    }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
