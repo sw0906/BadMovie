@@ -74,8 +74,15 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
         setupTableView()
         startGetGenreList()
         startRequest()
-        setupComboxGenre()
-        setupComboxYear()
+    }
+    
+    func setupSortView()
+    {
+        if comboxViewYear == nil {
+            filterItem.enabled = true;
+            setupComboxGenre()
+            setupComboxYear()
+        }
     }
     
     private func setupNav()
@@ -100,9 +107,15 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
         navItem.leftBarButtonItem = filterItem
         
         navItem.title = "Bad Movie"
+        
+        hideFilter(true)
     }
     
-    
+    func hideFilter(hide: Bool)
+    {
+        sectionHight = hide ? 0 : 86
+        self.tableView.reloadSections(NSIndexSet(indexesInRange: NSMakeRange(0, 1)), withRowAnimation: UITableViewRowAnimation.Automatic)
+    }
     
     
     private func setupTableView()
@@ -135,6 +148,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
         self.tableView.reloadSections(NSIndexSet(indexesInRange: NSMakeRange(0, 1)), withRowAnimation: UITableViewRowAnimation.Automatic)
     }
     
+
     
     //MARK: - Request
     func startGetGenreList() {
@@ -149,7 +163,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
                 case .Success:
                     if let value = response.result.value {
                         BMRequestManager.sharedInstance.parseGenre(value)
-                        self.filterItem.enabled = true
+                        self.setupSortView()
                     }
                     print("Validation Successful")
                     
@@ -168,7 +182,6 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
         let params = BMRequestManager.sharedInstance.discoveryParams(pageNumber, sortType: sortType, key: searchWords, genre: searchGenre, year: searhYear)
         
         Alamofire.request(.GET, api, parameters: params)
-            //            Alamofire.request(.GET, api)
             .validate()
             .responseJSON { response in
                 print(response)
@@ -178,7 +191,6 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
                 case .Success:
                     if let value = response.result.value {
                         self.movies = BMRequestManager.sharedInstance.parseSearch(value)
-                        self.filterItem.enabled = true
                         self.pageNumber += 1
                         dispatch_async(dispatch_get_main_queue(), { () -> Void in
                             self.tableView.reloadData()
@@ -210,7 +222,6 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
                     if let value = response.result.value {
                         let newMoview = BMRequestManager.sharedInstance.parseSearch(value)
                         self.movies += newMoview
-                        self.filterItem.enabled = true
                         self.pageNumber += 1
                         
                         dispatch_async(dispatch_get_main_queue(), { () -> Void in

@@ -279,11 +279,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BadMovie/BMMainTableViewController.swift"
-            timestampString = "489234847.312936"
+            timestampString = "489243261.259551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "startRequest()"
             landmarkType = "5">
          </BreakpointContent>
@@ -301,6 +301,38 @@
             startingLineNumber = "127"
             endingLineNumber = "127"
             landmarkName = "playerView(_:didChangeToState:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BadMovie/BMMainTableViewController.swift"
+            timestampString = "489243261.259551"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
+            landmarkName = "setupComboxGenre()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BadMovie/BMMainTableViewController.swift"
+            timestampString = "489243336.07385"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "setupSortView()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

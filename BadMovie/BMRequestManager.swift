@@ -123,9 +123,9 @@ class BMRequestManager {
     func getFullOptionNames() -> [String]
     {
         var genreOps:[String] = [String]()
-        genreOps.append(defaultGenre.id)
+        genreOps.append(defaultGenre.name)
         for item in genres {
-            genreOps.append(item.id)
+            genreOps.append(item.name)
         }
         return genreOps
     }
