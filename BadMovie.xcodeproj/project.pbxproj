@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		32A09CF1197769D05180EEF1 /* Pods_BadMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118B77811591E19C7430B3E1 /* Pods_BadMovie.framework */; };
 		D00E29571D278F5B00F5CBF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E29561D278F5B00F5CBF5 /* AppDelegate.swift */; };
-		D00E29591D278F5B00F5CBF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E29581D278F5B00F5CBF5 /* ViewController.swift */; };
 		D00E295C1D278F5B00F5CBF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00E295A1D278F5B00F5CBF5 /* Main.storyboard */; };
 		D00E295F1D278F5C00F5CBF5 /* BadMovie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D00E295D1D278F5B00F5CBF5 /* BadMovie.xcdatamodeld */; };
 		D00E29611D278F5C00F5CBF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00E29601D278F5C00F5CBF5 /* Assets.xcassets */; };
@@ -30,10 +29,7 @@
 		D0B2C2581D279839002CD93F /* MovieItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B2C2571D279839002CD93F /* MovieItem.swift */; };
 		D0B2C25B1D27EAE5002CD93F /* BMSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B2C25A1D27EAE5002CD93F /* BMSearchTableViewController.swift */; };
 		D0B2C25D1D27FB67002CD93F /* BMMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B2C25C1D27FB67002CD93F /* BMMainTableViewController.swift */; };
-		D0B2C2611D2803F4002CD93F /* BMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B2C25F1D2803F4002CD93F /* BMTableViewCell.swift */; };
-		D0B2C2621D2803F4002CD93F /* BMTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B2C2601D2803F4002CD93F /* BMTableViewCell.xib */; };
 		D0B2C2641D2820FD002CD93F /* BMRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B2C2631D2820FD002CD93F /* BMRequestManager.swift */; };
-		D0EAB4311D28DFEE003AF0AE /* BMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAB4301D28DFEE003AF0AE /* BMCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +37,6 @@
 		11ECEDBA4A2D66809A83D8DE /* Pods-BadMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadMovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BadMovie/Pods-BadMovie.debug.xcconfig"; sourceTree = "<group>"; };
 		D00E29531D278F5B00F5CBF5 /* BadMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00E29561D278F5B00F5CBF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D00E29581D278F5B00F5CBF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D00E295B1D278F5B00F5CBF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D00E295E1D278F5B00F5CBF5 /* BadMovie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BadMovie.xcdatamodel; sourceTree = "<group>"; };
 		D00E29601D278F5C00F5CBF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,10 +58,7 @@
 		D0B2C2571D279839002CD93F /* MovieItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieItem.swift; sourceTree = "<group>"; };
 		D0B2C25A1D27EAE5002CD93F /* BMSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSearchTableViewController.swift; sourceTree = "<group>"; };
 		D0B2C25C1D27FB67002CD93F /* BMMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMMainTableViewController.swift; sourceTree = "<group>"; };
-		D0B2C25F1D2803F4002CD93F /* BMTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMTableViewCell.swift; sourceTree = "<group>"; };
-		D0B2C2601D2803F4002CD93F /* BMTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMTableViewCell.xib; sourceTree = "<group>"; };
 		D0B2C2631D2820FD002CD93F /* BMRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMRequestManager.swift; sourceTree = "<group>"; };
-		D0EAB4301D28DFEE003AF0AE /* BMCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMCell.swift; sourceTree = "<group>"; };
 		EDAC4843F4912E212524BBA1 /* Pods-BadMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BadMovie/Pods-BadMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,7 +143,6 @@
 		D0B2C2551D2797A8002CD93F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D00E29581D278F5B00F5CBF5 /* ViewController.swift */,
 				D0B2C25A1D27EAE5002CD93F /* BMSearchTableViewController.swift */,
 				D0B2C25C1D27FB67002CD93F /* BMMainTableViewController.swift */,
 				D0189FB81D292A1500CEC47C /* BMDetailController.swift */,
@@ -184,9 +175,6 @@
 			children = (
 				D0189FBA1D29650100CEC47C /* TestCell.swift */,
 				D0189FBB1D29650100CEC47C /* TestCell.xib */,
-				D0B2C25F1D2803F4002CD93F /* BMTableViewCell.swift */,
-				D0B2C2601D2803F4002CD93F /* BMTableViewCell.xib */,
-				D0EAB4301D28DFEE003AF0AE /* BMCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -263,7 +251,6 @@
 				D03E989D1D29171500AD5B47 /* icn-dropdown.pdf in Resources */,
 				D00E29641D278F5C00F5CBF5 /* LaunchScreen.storyboard in Resources */,
 				D00E29611D278F5C00F5CBF5 /* Assets.xcassets in Resources */,
-				D0B2C2621D2803F4002CD93F /* BMTableViewCell.xib in Resources */,
 				D03E989F1D29171500AD5B47 /* SWComboxCountry.xib in Resources */,
 				D0189FBD1D29650100CEC47C /* TestCell.xib in Resources */,
 				D00E295C1D278F5B00F5CBF5 /* Main.storyboard in Resources */,
@@ -327,7 +314,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D00E29591D278F5B00F5CBF5 /* ViewController.swift in Sources */,
 				D0B2C2581D279839002CD93F /* MovieItem.swift in Sources */,
 				D03E98A01D29171500AD5B47 /* SWComboxHelper.swift in Sources */,
 				D03E98A51D29171500AD5B47 /* UIViewEx.swift in Sources */,
@@ -337,12 +323,10 @@
 				D0189FB91D292A1500CEC47C /* BMDetailController.swift in Sources */,
 				D03E989E1D29171500AD5B47 /* SWComboxCountry.swift in Sources */,
 				D0189FBC1D29650100CEC47C /* TestCell.swift in Sources */,
-				D0EAB4311D28DFEE003AF0AE /* BMCell.swift in Sources */,
 				D0B2C2641D2820FD002CD93F /* BMRequestManager.swift in Sources */,
 				D00E295F1D278F5C00F5CBF5 /* BadMovie.xcdatamodeld in Sources */,
 				D0B2C25D1D27FB67002CD93F /* BMMainTableViewController.swift in Sources */,
 				D03E98A11D29171500AD5B47 /* SWComboxTitle.swift in Sources */,
-				D0B2C2611D2803F4002CD93F /* BMTableViewCell.swift in Sources */,
 				D0189FBF1D297F6800CEC47C /* UIColorEx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

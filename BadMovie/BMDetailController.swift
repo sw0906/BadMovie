@@ -71,7 +71,7 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
         super.viewDidLoad()
         
         if Reachability.isConnectedToNetwork() {
-            wifiText.hidden = true
+//            wifiText.hidden = true
         }
         else
         {
@@ -179,6 +179,7 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
     func playerViewDidBecomeReady(playerView: YTPlayerView)
     {
         SVProgressHUD.dismiss()
+        view.bringSubviewToFront(wifiText)
     }
     
     func playerView(playerView: YTPlayerView, didChangeToState state: YTPlayerState)
