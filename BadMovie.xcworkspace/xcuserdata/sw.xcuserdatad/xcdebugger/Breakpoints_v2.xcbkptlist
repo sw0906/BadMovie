@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BadMovie/BMRequestManager.swift"
-            timestampString = "489239712.913678"
+            timestampString = "489264095.366033"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "parseGenre(_:)"
             landmarkType = "5">
          </BreakpointContent>

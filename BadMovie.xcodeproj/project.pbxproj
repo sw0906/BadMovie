@@ -86,7 +86,6 @@
 		D00E294A1D278F5B00F5CBF5 = {
 			isa = PBXGroup;
 			children = (
-				D03E98A61D29171900AD5B47 /* ComboBox */,
 				D00E29551D278F5B00F5CBF5 /* BadMovie */,
 				D00E29541D278F5B00F5CBF5 /* Products */,
 				9AC07ECDC640411BD50F0FCF /* Pods */,
@@ -130,12 +129,14 @@
 				D03E989C1D29171500AD5B47 /* UIViewEx.swift */,
 			);
 			name = ComboBox;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D0B2C2541D27979F002CD93F /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				D0B2C2571D279839002CD93F /* MovieItem.swift */,
+				D0B2C2631D2820FD002CD93F /* BMRequestManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -164,7 +165,6 @@
 		D0B2C2591D27BB8E002CD93F /* Categrory */ = {
 			isa = PBXGroup;
 			children = (
-				D0B2C2631D2820FD002CD93F /* BMRequestManager.swift */,
 				D0189FBE1D297F6800CEC47C /* UIColorEx.swift */,
 			);
 			name = Categrory;
@@ -173,6 +173,7 @@
 		D0B2C25E1D2803C6002CD93F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D03E98A61D29171900AD5B47 /* ComboBox */,
 				D0189FBA1D29650100CEC47C /* TestCell.swift */,
 				D0189FBB1D29650100CEC47C /* TestCell.xib */,
 			);

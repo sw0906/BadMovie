@@ -59,7 +59,7 @@ struct VideoItem {
 
 class BMRequestManager {
     let genreApi = "http://api.themoviedb.org/3/genre/movie/list?api_key=929a1bc82174d488c8fe8478baf7a6fe"
-    let discovery = "http://api.themoviedb.org/3/discover/movie"//?api_key=929a1bc82174d488c8fe8478baf7a6fe"
+    let discovery = "http://api.themoviedb.org/3/discover/movie"
     
     
     var genres:[Genre] = [Genre]()
@@ -67,15 +67,7 @@ class BMRequestManager {
     
     
 
-    let videosApi = "http://api.themoviedb.org/3/movie/441/videos?api_key=929a1bc82174d488c8fe8478baf7a6fe"
-    let movieApi:String = "http://api.themoviedb.org/3/movie/id"
-    let key = "api_key=929a1bc82174d488c8fe8478baf7a6fe"
-    
-    //    year
-    //    with_keywords
-    //    with_genres
-    //    sort_by  vote_count.asc    vote_count.desc     popularity.asc popularity.desc
-    
+
     class var sharedInstance: BMRequestManager {
         struct Static {
             static var onceToken: dispatch_once_t = 0
@@ -95,7 +87,6 @@ class BMRequestManager {
         let movieItems = json["genres"].array
         var results = Array<Genre>()
         for item in movieItems! {
-//            print("movie type is = \(item.description)\n")
             let genreId = item["id"].stringValue
             let name = item["name"].stringValue
             let  genre =  Genre(id: genreId, name: name)
@@ -149,7 +140,7 @@ class BMRequestManager {
             let dic = ["page":String(number),
                        "sort_by" : sortString,
                        "with_keywords":key,
-//                       "with_genres": genre,
+                       "with_genres": genre,
                        "api_key": "929a1bc82174d488c8fe8478baf7a6fe"]
             return dic
         }
@@ -169,18 +160,7 @@ class BMRequestManager {
         return videosApi
     }
     
-//    "results": [
-//    {
-//    "id": "533ec654c3a36854480003eb",
-//    "iso_639_1": "en",
-//    "key": "SUXWAEX2jlg",
-//    "name": "Trailer 1",
-//    "site": "YouTube",
-//    "size": 720,
-//    "type": "Trailer"
-//    }
-//    ]
-//    
+
     func parseVideo(data: AnyObject) -> [VideoItem] {
         let json = JSON(data)
         let movieItems = json["results"].array
