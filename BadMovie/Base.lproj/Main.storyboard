@@ -259,8 +259,8 @@
                         <outlet property="peopleImageView" destination="YHi-gG-5a7" id="A7e-fF-CmA"/>
                         <outlet property="playSlide" destination="kXh-6x-CEK" id="iua-tu-XqG"/>
                         <outlet property="playView" destination="Gf0-SR-8e8" id="7jI-2y-8GW"/>
-                        <outlet property="rateLabel" destination="Egl-Pc-9Fo" id="gkV-MH-5Oi"/>
-                        <outlet property="rateNumberLabel" destination="qgF-ly-WIc" id="cte-pk-SCB"/>
+                        <outlet property="rateLabel" destination="qgF-ly-WIc" id="jEQ-Le-P3m"/>
+                        <outlet property="rateNumberLabel" destination="Egl-Pc-9Fo" id="d8K-mE-cEy"/>
                         <outlet property="rateView" destination="ecr-NY-6qX" id="WJp-n7-nUt"/>
                         <outlet property="starImageView" destination="x4A-Lx-vlz" id="si7-0e-icK"/>
                         <outlet property="titleLabel" destination="GEL-QC-90e" id="I6Z-l7-0Md"/>
