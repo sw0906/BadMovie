@@ -60,7 +60,7 @@ struct VideoItem {
 class BMRequestManager {
     let genreApi = "http://api.themoviedb.org/3/genre/movie/list?api_key=929a1bc82174d488c8fe8478baf7a6fe"
     let discovery = "http://api.themoviedb.org/3/discover/movie"
-    
+    let searchApi = "http://api.themoviedb.org/3/search/movie"
     
     var genres:[Genre] = [Genre]()
     let defaultGenre = Genre(id:"", name: "All Genres")
@@ -171,5 +171,17 @@ class BMRequestManager {
             movies.append(movie)
         }
         return movies
+    }
+    
+    
+    //MARK: - Search
+    func searchParams(pageNumber: Int, key: String, year: String) -> [String:AnyObject]
+    {
+        let dic = ["page":String(pageNumber),
+                   "year" : year,
+                   "query":key,
+                   "api_key": "929a1bc82174d488c8fe8478baf7a6fe"]
+        return dic
+        
     }
 }
