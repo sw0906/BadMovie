@@ -156,6 +156,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     {
         gotoTop()
         sectionHight = sectionHight == 0 ? 86 : 0
+        tableView.tableHeaderView = (sectionHight == 0) ? nil : sortView
         self.tableView.reloadSections(NSIndexSet(indexesInRange: NSMakeRange(0, 1)), withRowAnimation: UITableViewRowAnimation.Automatic)
     }
 
@@ -286,11 +287,11 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return sectionHight//44
+        return 0//sectionHight//44
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return sectionHight == 0 ? nil : sortView
+        return nil//sectionHight == 0 ? nil : sortView
     }
     
     

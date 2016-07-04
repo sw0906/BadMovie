@@ -32,6 +32,7 @@ class BMSearchTableViewController: BMMainTableViewController, UISearchBarDelegat
         setupTableView()
         setupComboxGenre()
         setupComboxYear()
+        tableView.tableHeaderView = sortView
     }
     
     override func setupNav() {
@@ -109,11 +110,11 @@ class BMSearchTableViewController: BMMainTableViewController, UISearchBarDelegat
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return  sortView
+        return  nil//sortView
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 86
+        return 0
     }
     
 }
