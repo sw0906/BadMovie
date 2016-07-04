@@ -125,7 +125,10 @@ class MovieItem: NSObject {
     }
     
     func getYear() -> String {
-        let year =  (release_date as NSString).substringToIndex(4)
-        return year
+        if release_date.characters.count > 4 {
+            let year =  (release_date as NSString).substringToIndex(4)
+            return year
+        }
+        return release_date
     }
 }
