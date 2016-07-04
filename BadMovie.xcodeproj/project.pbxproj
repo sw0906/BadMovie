@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		32A09CF1197769D05180EEF1 /* Pods_BadMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118B77811591E19C7430B3E1 /* Pods_BadMovie.framework */; };
+		84F5B9A61D2A2F1300ACB332 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F5B9A51D2A2F1300ACB332 /* Reachability.m */; };
 		D00E29571D278F5B00F5CBF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E29561D278F5B00F5CBF5 /* AppDelegate.swift */; };
 		D00E295C1D278F5B00F5CBF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00E295A1D278F5B00F5CBF5 /* Main.storyboard */; };
 		D00E295F1D278F5C00F5CBF5 /* BadMovie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D00E295D1D278F5B00F5CBF5 /* BadMovie.xcdatamodeld */; };
@@ -35,6 +36,10 @@
 /* Begin PBXFileReference section */
 		118B77811591E19C7430B3E1 /* Pods_BadMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11ECEDBA4A2D66809A83D8DE /* Pods-BadMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadMovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BadMovie/Pods-BadMovie.debug.xcconfig"; sourceTree = "<group>"; };
+		84F5B9A31D2A2F1300ACB332 /* BadMovie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BadMovie-Bridging-Header.h"; sourceTree = "<group>"; };
+		84F5B9A41D2A2F1300ACB332 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = objc/Reachability.h; sourceTree = "<group>"; };
+		84F5B9A51D2A2F1300ACB332 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = objc/Reachability.m; sourceTree = "<group>"; };
+		84F5B9A71D2A2F6A00ACB332 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D00E29531D278F5B00F5CBF5 /* BadMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00E29561D278F5B00F5CBF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D00E295B1D278F5B00F5CBF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +79,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84F5B9A21D2A2EEB00ACB332 /* Objc */ = {
+			isa = PBXGroup;
+			children = (
+				84F5B9A41D2A2F1300ACB332 /* Reachability.h */,
+				84F5B9A51D2A2F1300ACB332 /* Reachability.m */,
+				84F5B9A31D2A2F1300ACB332 /* BadMovie-Bridging-Header.h */,
+			);
+			name = Objc;
+			sourceTree = "<group>";
+		};
 		9AC07ECDC640411BD50F0FCF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +119,7 @@
 		D00E29551D278F5B00F5CBF5 /* BadMovie */ = {
 			isa = PBXGroup;
 			children = (
+				84F5B9A21D2A2EEB00ACB332 /* Objc */,
 				D0B2C2561D2797B9002CD93F /* SupportFiles */,
 				D0B2C25E1D2803C6002CD93F /* View */,
 				D0B2C2591D27BB8E002CD93F /* Categrory */,
@@ -183,6 +199,7 @@
 		D6C6551A7480AAA89F974690 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84F5B9A71D2A2F6A00ACB332 /* CoreGraphics.framework */,
 				118B77811591E19C7430B3E1 /* Pods_BadMovie.framework */,
 			);
 			name = Frameworks;
@@ -320,6 +337,7 @@
 				D03E98A01D29171500AD5B47 /* SWComboxHelper.swift in Sources */,
 				D03E98A51D29171500AD5B47 /* UIViewEx.swift in Sources */,
 				D03E98A31D29171500AD5B47 /* SWComboxView.swift in Sources */,
+				84F5B9A61D2A2F1300ACB332 /* Reachability.m in Sources */,
 				D00E29571D278F5B00F5CBF5 /* AppDelegate.swift in Sources */,
 				D0B2C25B1D27EAE5002CD93F /* BMSearchTableViewController.swift in Sources */,
 				D0189FB91D292A1500CEC47C /* BMDetailController.swift in Sources */,
@@ -447,11 +465,14 @@
 			baseConfigurationReference = 11ECEDBA4A2D66809A83D8DE /* Pods-BadMovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BadMovie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visa.BadMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BadMovie/BadMovie-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -460,11 +481,13 @@
 			baseConfigurationReference = EDAC4843F4912E212524BBA1 /* Pods-BadMovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BadMovie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visa.BadMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BadMovie/BadMovie-Bridging-Header.h";
 			};
 			name = Release;
 		};

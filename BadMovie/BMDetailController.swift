@@ -12,30 +12,15 @@ import Alamofire
 import SwiftyJSON
 import FontAwesomeKit
 import FontAwesomeIconFactory
-import SystemConfiguration
+import SystemConfiguration.SCNetworkReachability
 import SVProgressHUD
 
 
-public class Reachability {
-    class func isConnectedToNetwork() -> Bool {
-        var zeroAddress = sockaddr_in()
-        zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
-        zeroAddress.sin_family = sa_family_t(AF_INET)
-        let defaultRouteReachability = withUnsafePointer(&zeroAddress) {
-            SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0))
-        }
-        var flags = SCNetworkReachabilityFlags()
-        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
-            return false
-        }
-        let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
-        let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
-        return (isReachable && !needsConnection)
-    }
+enum ReachabilityType {
+    case WWAN,
+    WiFi,
+    NotConnected
 }
-
-
-
 
 
 
@@ -67,10 +52,19 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
     
     var movieItem:MovieItem!
     
+    
+    func isConnectedWifi() -> Bool {
+        let reachability = Reachability.reachabilityForInternetConnection()
+        let status = reachability.isConnectWifi()
+        return status
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if Reachability.isConnectedToNetwork() {
+        
+        if self.isConnectedWifi(){
             wifiText.hidden = true
         }
         else
