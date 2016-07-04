@@ -45,7 +45,7 @@ class MovieItem: NSObject {
     var popularity:String? = nil
     
     var video:NSURL? = nil
-    var release_date:String? = nil
+    var release_date:String!
     
     let imagePath = "http://image.tmdb.org/t/p/w500/"
 
@@ -120,8 +120,12 @@ class MovieItem: NSObject {
     
     func getTitleString()->String
     {
-        let titleS = title + " (" + release_date! + ")"
+        let titleS = title + " (" + self.getYear() + ")"
         return titleS
     }
     
+    func getYear() -> String {
+        let year =  (release_date as NSString).substringToIndex(4)
+        return year
+    }
 }
