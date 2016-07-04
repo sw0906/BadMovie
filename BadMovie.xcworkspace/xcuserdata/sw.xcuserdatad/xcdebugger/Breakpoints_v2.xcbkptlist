@@ -295,12 +295,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BadMovie/BMMainTableViewController.swift"
-            timestampString = "489262575.194378"
+            timestampString = "489328177.185373"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "372"
-            endingLineNumber = "372"
-            landmarkName = "setupComboxGenre()"
+            startingLineNumber = "371"
+            endingLineNumber = "371"
+            landmarkName = "selectedAtIndex(_:combox:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -316,7 +316,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
             endingLineNumber = "70"
-            landmarkName = "setupSortView()"
+            landmarkName = "resetRequestUrlAndParams()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -364,7 +364,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
             endingLineNumber = "60"
-            landmarkName = "searchBar(_:textDidChange:)"
+            landmarkName = "selectedGenre(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

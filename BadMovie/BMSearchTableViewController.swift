@@ -87,6 +87,7 @@ class BMSearchTableViewController: BMMainTableViewController, UISearchBarDelegat
     override func getSortMovies() -> [MovieItem] {
         return sortMovies
     }
+    
     override  func updateSortMovies() {
         if sortType == SortType.PooPoo {
             sortMovies = movies.sort { $0.vote_average.compare($1.vote_average) == .OrderedAscending }
@@ -99,6 +100,11 @@ class BMSearchTableViewController: BMMainTableViewController, UISearchBarDelegat
         {
             sortMovies = sortMovies.filter({ $0.genre_ids!.contains(searchGenre) })
         }
+        tableView.reloadData()
+    }
+    
+    override func updateMoreTable(newMoview: [MovieItem]) {
+        updateSortMovies()
         tableView.reloadData()
     }
     

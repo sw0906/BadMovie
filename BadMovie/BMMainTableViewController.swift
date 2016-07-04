@@ -205,9 +205,6 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
                         self.movies = BMRequestManager.sharedInstance.parseSearch(value)
                         self.pageNumber += 1
                         self.updateSortMovies()
-                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                            self.tableView.reloadData()
-                        })
                         
                     }
                     print("Validation Successful")
@@ -234,12 +231,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
                         let newMoview = BMRequestManager.sharedInstance.parseSearch(value)
                         self.movies += newMoview
                         self.pageNumber += 1
-                        self.updateSortMovies()
-                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                            self.tableView.beginUpdates()
-                            self.tableView.insertRowsAtIndexPaths(self.indexPathsNewDataCount(newMoview.count), withRowAnimation: UITableViewRowAnimation.Automatic)
-                            self.tableView.endUpdates()
-                        })
+                        self.updateMoreTable(newMoview)
                     }
                     print("Validation Successful")
                     
@@ -274,7 +266,18 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     
     func updateSortMovies()
     {
-        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.tableView.reloadData()
+        })
+
+    }
+    
+    func updateMoreTable(newMoview : [MovieItem])  {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.tableView.beginUpdates()
+            self.tableView.insertRowsAtIndexPaths(self.indexPathsNewDataCount(newMoview.count), withRowAnimation: UITableViewRowAnimation.Automatic)
+            self.tableView.endUpdates()
+        })
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
