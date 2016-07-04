@@ -151,12 +151,11 @@ class SWComboxView: UIView, UITableViewDataSource, UITableViewDelegate
     //MARK: Tap Action
     private func tapTheCombox()
     {
+        self.delegate.tapComboxToOpenTable?(self)
         setupTable()
         closeOtherCombox()
         closeCurrentCombox()
         openCurrentCombox()
-        
-        self.delegate.tapComboxToOpenTable?(self)
     }
     
     

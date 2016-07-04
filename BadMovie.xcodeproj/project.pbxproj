@@ -223,6 +223,7 @@
 				TargetAttributes = {
 					D00E29521D278F5B00F5CBF5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = RP22BNBL8G;
 					};
 				};
 			};
@@ -446,6 +447,7 @@
 			baseConfigurationReference = 11ECEDBA4A2D66809A83D8DE /* Pods-BadMovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BadMovie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visa.BadMovie;
@@ -458,6 +460,7 @@
 			baseConfigurationReference = EDAC4843F4912E212524BBA1 /* Pods-BadMovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BadMovie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visa.BadMovie;

@@ -114,8 +114,6 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     
     func setupTableView()
     {
-//        let nib = UINib(nibName: "BMTableViewCell", bundle: NSBundle.mainBundle())
-//        tableView.registerNib(nib, forCellReuseIdentifier: "BMTableViewCell")
         let testNib = UINib(nibName: "TestCell", bundle: NSBundle.mainBundle())
         tableView.registerNib(testNib, forCellReuseIdentifier: "TestCell")
     }
@@ -285,12 +283,9 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //        let cell:BMTableViewCell = tableView.dequeueReusableCellWithIdentifier("BMTableViewCell", forIndexPath: indexPath) as! BMTableViewCell
-        
         let cell:TestCell = tableView.dequeueReusableCellWithIdentifier("TestCell", forIndexPath: indexPath) as! TestCell
         let item = movies[indexPath.row]
         cell.bindMovie(item)
-        //        let cell:BMCell = tableView.dequeueReusableCellWithIdentifier("BMCell", forIndexPath: indexPath) as! BMCell
         return cell
     }
     
