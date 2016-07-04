@@ -152,6 +152,11 @@ class SWComboxView: UIView, UITableViewDataSource, UITableViewDelegate
     private func tapTheCombox()
     {
         self.delegate.tapComboxToOpenTable?(self)
+        NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(SWComboxView.tapComboxHelper), userInfo: nil, repeats: false)
+    }
+    
+    func tapComboxHelper()
+    {
         setupTable()
         closeOtherCombox()
         closeCurrentCombox()

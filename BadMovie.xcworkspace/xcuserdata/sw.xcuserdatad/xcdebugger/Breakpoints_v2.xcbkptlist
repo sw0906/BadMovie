@@ -284,7 +284,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "189"
             endingLineNumber = "189"
-            landmarkName = "playerView(_:didChangeToState:)"
+            landmarkName = "playerView(_:didPlayTime:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -332,7 +332,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "173"
             endingLineNumber = "173"
-            landmarkName = "setupYoutube(_:)"
+            landmarkName = "playerViewDidBecomeReady(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -348,8 +348,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "199"
             endingLineNumber = "199"
-            landmarkName = "onSliderChange(_:)"
-            landmarkType = "5">
+            landmarkName = "BMDetailController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -359,11 +359,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BadMovie/BMSearchTableViewController.swift"
-            timestampString = "489328376.014519"
+            timestampString = "489344408.98335"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "selectedGenre(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -397,6 +397,22 @@
             startingLineNumber = "78"
             endingLineNumber = "78"
             landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BadMovie/BMSearchTableViewController.swift"
+            timestampString = "489344408.98335"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "searchBarSearchButtonClicked(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

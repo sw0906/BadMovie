@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import FontAwesomeKit
 import FontAwesomeIconFactory
-import MJRefresh
+//import MJRefresh
 import SVProgressHUD
 
 
@@ -32,7 +32,8 @@ class BMSearchTableViewController: BMMainTableViewController, UISearchBarDelegat
         setupTableView()
         setupComboxGenre()
         setupComboxYear()
-        tableView.tableHeaderView = sortView
+//        tableView.tableHeaderView = sortView
+        tableView.keyboardDismissMode = .OnDrag
     }
     
     override func setupNav() {
@@ -82,6 +83,9 @@ class BMSearchTableViewController: BMMainTableViewController, UISearchBarDelegat
         startRequest()
     }
 
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
     
     
     //MARK: - TABLE
@@ -110,11 +114,11 @@ class BMSearchTableViewController: BMMainTableViewController, UISearchBarDelegat
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return  nil//sortView
+        return  sortView
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0
+        return 86
     }
     
 }
