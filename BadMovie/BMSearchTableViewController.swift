@@ -84,8 +84,9 @@ class BMSearchTableViewController: BMMainTableViewController, UISearchBarDelegat
     }
 
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
+//        searchBar.resignFirstResponder()
     }
+    
     
     
     //MARK: - TABLE
