@@ -53,6 +53,21 @@ class BMSearchTableViewController: BMMainTableViewController, UISearchBarDelegat
         api = BMRequestManager.sharedInstance.searchApi
         params = BMRequestManager.sharedInstance.searchParams(pageNumber, key: searchWords, year: searhYear)
     }
+    
+
+    
+    //Mark: - filter
+    override func selectedGenre(genre: String) {
+
+        sortMovies = movies.sort { $0.vote_average.compare($1.vote_average) == .OrderedAscending }
+    }
+    
+
+    
+    override func tapSortHelper(type: SortType) {
+        updateSortMovies()
+    }
+    
 
     
     //MARK: - Search Bar
@@ -70,6 +85,39 @@ class BMSearchTableViewController: BMMainTableViewController, UISearchBarDelegat
     
     
     //MARK: - TABLE
+    override func getSortMovies() -> [MovieItem] {
+        return sortMovies
+    }
+    override  func updateSortMovies() {
+        if sortType == SortType.PooPoo {
+            sortMovies = movies.sort { $0.vote_average.compare($1.vote_average) == .OrderedAscending }
+        }
+        else
+        {
+            sortMovies = movies.sort { $0.vote_average.compare($1.vote_average) == .OrderedDescending }
+        }
+        tableView.reloadData()
+//        let filteredArray = objects.filter() {
+//            if let type = ($0 as PFObject)["Type"] as String {
+//                return type.rangeOfString("Sushi") != nil
+//            } else {
+//                return false
+//            }
+//        }
+        
+//        //filter
+//        if searchGenre.characters.count > 0 {
+//            $0.vote_average.
+//            sortMovies = movies.filter(){
+//                if let type = ($0 as PFObject)["Type"] as String {
+//                    return type.rangeOfString("Sushi") != nil
+//                } else {
+//                    return false
+//                }
+//            }
+//        }
+    }
+    
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return  sortView
     }

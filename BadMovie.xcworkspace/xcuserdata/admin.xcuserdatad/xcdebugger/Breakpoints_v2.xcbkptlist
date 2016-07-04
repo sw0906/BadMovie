@@ -38,7 +38,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BadMovie/AppDelegate.swift"
@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BadMovie/MovieItem.swift"
-            timestampString = "489316331.91199"
+            filePath = "BadMovie/BMSearchTableViewController.swift"
+            timestampString = "489320305.616377"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "getYear()"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "updateSortMovies()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,46 +73,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BadMovie/MovieItem.swift"
-            timestampString = "489316381.011287"
+            filePath = "BadMovie/BMSearchTableViewController.swift"
+            timestampString = "489320305.616377"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "getYear()"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "updateSortMovies()"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BadMovie/MovieItem.swift"
-            timestampString = "489316382.23529"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "getYear()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BadMovie/MovieItem.swift"
-            timestampString = "489316421.471451"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "getTitleString()"
-            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BadMovie.BMSearchTableViewController.updateSortMovies () -&gt; ()"
+                  moduleName = "BadMovie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/BadMovie/BadMovie/BMSearchTableViewController.swift"
+                  timestampString = "489320306.799229"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "724">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BadMovie.BMSearchTableViewController.(updateSortMovies () -&gt; ()).(closure #2)"
+                  moduleName = "BadMovie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/BadMovie/BadMovie/BMSearchTableViewController.swift"
+                  timestampString = "489320306.799334"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

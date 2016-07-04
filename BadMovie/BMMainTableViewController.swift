@@ -18,6 +18,7 @@ import SVProgressHUD
 class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     let filterItem:UIBarButtonItem = UIBarButtonItem()
     var movies:[MovieItem] = [MovieItem]()
+    var sortMovies:[MovieItem] = [MovieItem]()
     var sortType: SortType = .PooPoo
     var searchWords: String = ""
     var searchGenre: String = ""
@@ -139,6 +140,10 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
         default:
             break;
         }
+        tapSortHelper(sortType)
+    }
+    func tapSortHelper(type: SortType)
+    {
         startRequest()
     }
     
@@ -153,8 +158,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
         sectionHight = sectionHight == 0 ? 86 : 0
         self.tableView.reloadSections(NSIndexSet(indexesInRange: NSMakeRange(0, 1)), withRowAnimation: UITableViewRowAnimation.Automatic)
     }
-    
-    
+
     
     //MARK: - Request
     func startGetGenreList() {
@@ -200,6 +204,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
                     if let value = response.result.value {
                         self.movies = BMRequestManager.sharedInstance.parseSearch(value)
                         self.pageNumber += 1
+                        self.updateSortMovies()
                         dispatch_async(dispatch_get_main_queue(), { () -> Void in
                             self.tableView.reloadData()
                         })
@@ -229,7 +234,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
                         let newMoview = BMRequestManager.sharedInstance.parseSearch(value)
                         self.movies += newMoview
                         self.pageNumber += 1
-                        
+                        self.updateSortMovies()
                         dispatch_async(dispatch_get_main_queue(), { () -> Void in
                             self.tableView.beginUpdates()
                             self.tableView.insertRowsAtIndexPaths(self.indexPathsNewDataCount(newMoview.count), withRowAnimation: UITableViewRowAnimation.Automatic)
@@ -262,6 +267,16 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     
     
     // MARK: - Table view data source
+    func getSortMovies()->[MovieItem]
+    {
+        return movies
+    }
+    
+    func updateSortMovies()
+    {
+        
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -278,13 +293,13 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return movies.count
+        return getSortMovies().count
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:TestCell = tableView.dequeueReusableCellWithIdentifier("TestCell", forIndexPath: indexPath) as! TestCell
-        let item = movies[indexPath.row]
+        let item = getSortMovies()[indexPath.row]
         cell.bindMovie(item)
         return cell
     }
@@ -295,14 +310,14 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        let lastCell = movies.count - 5;
+        let lastCell = getSortMovies().count - 5;
         if indexPath.row == lastCell {
             moreRequest()
         }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let item = movies[indexPath.row]
+        let item = getSortMovies()[indexPath.row]
         performSegueWithIdentifier("goDetail", sender: item)
     }
     
@@ -350,6 +365,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     {
         if combox == comboxViewGenre {
             self.searchGenre = BMRequestManager.sharedInstance.getFullOptionIds()[index]
+            selectedGenre(self.searchGenre)
         }
         if combox == comboxViewYear
         {
@@ -360,13 +376,28 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
             {
                 self.searhYear = ""
             }
+            selectedYear(self.searhYear)
         }
-        startRequest()
+       
     }
+    
+    
     
     func tapComboxToOpenTable(combox: SWComboxView)
     {
         gotoTop()
+    }
+    
+    
+    //MARK: - Combox for search
+    func selectedGenre(genre : String)
+    {
+         startRequest()
+    }
+    
+    func selectedYear(year : String)
+    {
+         startRequest()
     }
     
     func gotoTop() {
