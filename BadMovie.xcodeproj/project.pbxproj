@@ -152,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				D0B2C2571D279839002CD93F /* MovieItem.swift */,
-				D0B2C2631D2820FD002CD93F /* BMRequestManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -160,6 +159,7 @@
 		D0B2C2551D2797A8002CD93F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D0B2C2631D2820FD002CD93F /* BMRequestManager.swift */,
 				D0B2C25A1D27EAE5002CD93F /* BMSearchTableViewController.swift */,
 				D0B2C25C1D27FB67002CD93F /* BMMainTableViewController.swift */,
 				D0189FB81D292A1500CEC47C /* BMDetailController.swift */,

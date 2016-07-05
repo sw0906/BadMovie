@@ -62,8 +62,13 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        setupRateView()
+        setupData()
+        startRequestVideo()
+    }
+    
+    func setupWifi()
+    {
         if self.isConnectedWifi(){
             wifiText.hidden = true
         }
@@ -71,13 +76,8 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
         {
             wifiText.hidden = false
         }
-        
-        movieImageView.kf_setImageWithURL(movieItem.getBackdropUrl())
-        
         hiddeImageView(true)
-        setupRateView()
-        setupData()
-        startRequestVideo()
+        playSlide.hidden = true
     }
     
     func setupRateView() {
@@ -106,6 +106,7 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
     
     func setupData()
     {
+        movieImageView.kf_setImageWithURL(movieItem.getBackdropUrl())
         rateLabel.text = movieItem.vote_average
         rateNumberLabel.text = movieItem.vote_count
         GenreLabel.text = movieItem.getGenreName()
@@ -127,8 +128,8 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
     
+    //MARK: - Request
     func startRequestVideo() {
         SVProgressHUD.showWithStatus("Loading")
         let api = BMRequestManager.sharedInstance.videoApi(movieItem.movieId)
@@ -141,15 +142,8 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
                     
                 case .Success:
                     if let value = response.result.value {
-                       let videos = BMRequestManager.sharedInstance.parseVideo(value)
-                        if videos.count > 0
-                        {
-                            self.setupYoutube(videos[0].key)
-                        }
-                        else
-                        {
-                            self.hiddeImageView(false)
-                        }
+                        let videos = BMRequestManager.sharedInstance.parseVideo(value)
+                        self.updateVideo(videos)
                     }
                     print("Validation Successful")
                     
@@ -157,6 +151,21 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
                     print(error)
                 }
                 SVProgressHUD.dismiss()
+        }
+    }
+    
+    func updateVideo(videos: [VideoItem])
+    {
+        if videos.count > 0
+        {
+            setupYoutube(videos[0].key)
+            playSlide.hidden = false
+        }
+        else
+        {
+            hiddeImageView(false)
+            playSlide.hidden = true
+            wifiText.hidden = true
         }
     }
     
