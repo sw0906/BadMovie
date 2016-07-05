@@ -274,7 +274,7 @@ class SWComboxView: UIView, UITableViewDataSource, UITableViewDelegate
         let fullHeight = UIScreen.mainScreen().bounds.size.height
         if frame.origin.y + frame.size.height > fullHeight
         {
-            frame.size.height == fullHeight - frame.origin.y
+            frame.size.height = fullHeight - frame.origin.y
         }
         return frame
     }
