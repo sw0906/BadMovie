@@ -358,22 +358,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BadMovie/BMSearchTableViewController.swift"
-            timestampString = "489344408.98335"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "searchBarSearchButtonClicked(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "BadMovie/BMDetailController.swift"
             timestampString = "489389839.620252"
             startingColumnNumber = "9223372036854775807"
@@ -423,7 +407,7 @@
                   moduleName = "BadMovie"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sw/Desktop/BadMovie/BadMovie/objc/Reachability.m"
-                  timestampString = "489389841.243527"
+                  timestampString = "489426492.9939"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "229"
@@ -438,7 +422,7 @@
                   moduleName = "BadMovie"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sw/Desktop/BadMovie/BadMovie/objc/Reachability.m"
-                  timestampString = "489389841.243644"
+                  timestampString = "489426492.994013"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "229"
@@ -461,6 +445,22 @@
             startingLineNumber = "244"
             endingLineNumber = "244"
             landmarkName = "-isConnectWifi"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BadMovie/BMSearchTableViewController.swift"
+            timestampString = "489425448.248539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "tableView(_:willDisplayCell:forRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

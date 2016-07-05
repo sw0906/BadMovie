@@ -120,13 +120,13 @@
 			isa = PBXGroup;
 			children = (
 				84F5B9A21D2A2EEB00ACB332 /* Objc */,
-				D0B2C2561D2797B9002CD93F /* SupportFiles */,
 				D0B2C25E1D2803C6002CD93F /* View */,
 				D0B2C2591D27BB8E002CD93F /* Categrory */,
 				D0B2C2541D27979F002CD93F /* Model */,
 				D0B2C2551D2797A8002CD93F /* ViewController */,
 				D00E29561D278F5B00F5CBF5 /* AppDelegate.swift */,
 				D00E295A1D278F5B00F5CBF5 /* Main.storyboard */,
+				D0B2C2561D2797B9002CD93F /* SupportFiles */,
 			);
 			path = BadMovie;
 			sourceTree = "<group>";

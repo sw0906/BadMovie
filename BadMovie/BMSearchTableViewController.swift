@@ -122,4 +122,15 @@ class BMSearchTableViewController: BMMainTableViewController, UISearchBarDelegat
         return 86
     }
     
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if searchGenre == "" {
+            let lastCell = getSortMovies().count - 5;
+            if indexPath.row == lastCell {
+                moreRequest()
+            }
+        }
+
+    }
+    
 }

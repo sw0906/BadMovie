@@ -80,7 +80,7 @@ class MovieItem: NSObject {
     
     func getReleaseDate() -> NSDate {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"/* find out and place date format from http://userguide.icu-project.org/formatparse/datetime */
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         return dateFormatter.dateFromString(release_date!)!
     }
     
@@ -106,15 +106,9 @@ class MovieItem: NSObject {
     
     func getGenreName() -> String
     {
-        var genreS: String = ""
         let genreArray = BMRequestManager.sharedInstance.genres
-        for genreId in genre_ids! {
-            for genre in genreArray {
-                if genre.id == genreId {
-                     genreS += genre.name + " "
-                }
-            }
-        }
+        let filterGenre = genreArray.filter({genre_ids!.contains($0.id) }).map{$0.name}
+        let genreS = filterGenre.joinWithSeparator(" | ")
         return genreS
     }
     

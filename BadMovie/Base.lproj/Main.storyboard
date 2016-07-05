@@ -201,7 +201,7 @@
                                 <rect key="frame" x="20" y="448" width="560" height="142"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKQ-Ov-l3r">
-                                        <rect key="frame" x="0.0" y="0.0" width="540" height="500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="540" height="400"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZi-wq-LKc">
                                                 <rect key="frame" x="0.0" y="0.0" width="540" height="21"/>
@@ -214,7 +214,8 @@
                                         <constraints>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aZi-wq-LKc" secondAttribute="bottom" constant="10" id="FpK-vB-QQa"/>
                                             <constraint firstItem="aZi-wq-LKc" firstAttribute="leading" secondItem="BKQ-Ov-l3r" secondAttribute="leading" id="LLu-tU-gqF"/>
-                                            <constraint firstAttribute="height" constant="500" id="Waq-gq-BvQ"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="Waq-gq-BvQ"/>
+                                            <constraint firstAttribute="height" constant="400" id="eSQ-NK-KOf"/>
                                             <constraint firstAttribute="trailing" secondItem="aZi-wq-LKc" secondAttribute="trailing" id="ftl-Gc-9OG"/>
                                             <constraint firstItem="aZi-wq-LKc" firstAttribute="top" secondItem="BKQ-Ov-l3r" secondAttribute="top" id="qvp-Ow-wBj"/>
                                         </constraints>

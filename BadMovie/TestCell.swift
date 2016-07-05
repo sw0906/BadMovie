@@ -79,7 +79,7 @@ class TestCell: UITableViewCell {
         rateLabel.text = movie.vote_average
         rateNumberLabel.text = movie.vote_count
         GenreLabel.text = movie.getGenreName()
-        titleLabel.text = movie.getTitleString()
+        titleLabel.text = movie.title
     }
     
     func cancelDownload() {
