@@ -279,11 +279,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BadMovie/BMDetailController.swift"
-            timestampString = "489389216.03093"
+            timestampString = "489389839.620252"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "playerView(_:didPlayTime:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -327,29 +327,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BadMovie/BMDetailController.swift"
-            timestampString = "489389216.03093"
+            timestampString = "489389839.620252"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "playerViewDidBecomeReady(_:)"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BadMovie/BMDetailController.swift"
-            timestampString = "489389216.03093"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
-            landmarkName = "BMDetailController"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -391,11 +375,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BadMovie/BMDetailController.swift"
-            timestampString = "489389351.278377"
+            timestampString = "489389839.620252"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "setupWifi()"
             landmarkType = "5">
          </BreakpointContent>
@@ -439,7 +423,7 @@
                   moduleName = "BadMovie"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sw/Desktop/BadMovie/BadMovie/objc/Reachability.m"
-                  timestampString = "489389570.225256"
+                  timestampString = "489389841.243527"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "229"
@@ -454,7 +438,7 @@
                   moduleName = "BadMovie"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sw/Desktop/BadMovie/BadMovie/objc/Reachability.m"
-                  timestampString = "489389570.225396"
+                  timestampString = "489389841.243644"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "229"
@@ -477,22 +461,6 @@
             startingLineNumber = "244"
             endingLineNumber = "244"
             landmarkName = "-isConnectWifi"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BadMovie/BMDetailController.swift"
-            timestampString = "489389601.129197"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "isConnectedWifi()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

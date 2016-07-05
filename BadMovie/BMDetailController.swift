@@ -16,17 +16,6 @@ import SystemConfiguration.SCNetworkReachability
 import SVProgressHUD
 
 
-enum ReachabilityType {
-    case WWAN,
-    WiFi,
-    NotConnected
-}
-
-
-
-
-
-
 class BMDetailController: UIViewController, YTPlayerViewDelegate {
 
     @IBOutlet weak var playView: YTPlayerView!
@@ -51,14 +40,6 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
     
     
     var movieItem:MovieItem!
-    
-    
-    func isConnectedWifi() -> Bool {
-        let reachability = Reachability.reachabilityForInternetConnection()
-        let status = reachability.isConnectWifi()
-        return status
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -206,14 +187,11 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
 
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: - Helper
+    func isConnectedWifi() -> Bool {
+        let reachability = Reachability.reachabilityForInternetConnection()
+        let status = reachability.isConnectWifi()
+        return status
     }
-    */
-
+    
 }
