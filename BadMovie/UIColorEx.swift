@@ -29,6 +29,6 @@ extension UIColor {
     
     class func globalPooColor(alpha: CGFloat) -> UIColor
     {
-        return UIColor(red: 0.54, green: 0.4, blue: 0.06, alpha: alpha)
+        return UIColor(red: 0.6, green: 0.4, blue: 0.2, alpha: alpha)
     }
 }
