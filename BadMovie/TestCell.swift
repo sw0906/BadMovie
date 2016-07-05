@@ -80,6 +80,14 @@ class TestCell: UITableViewCell {
         rateNumberLabel.text = movie.vote_count
         GenreLabel.text = movie.getGenreName()
         titleLabel.text = movie.title
+        
+        addShadowColor(titleLabel)
+    }
+    
+    func addShadowColor(label: UILabel)
+    {
+        label.shadowColor = UIColor.flatBlackColor()
+        label.shadowOffset = CGSizeMake(1, 1)
     }
     
     func cancelDownload() {
