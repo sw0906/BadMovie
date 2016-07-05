@@ -65,6 +65,7 @@ class BMDetailController: UIViewController, YTPlayerViewDelegate {
         setupRateView()
         setupData()
         startRequestVideo()
+        setupWifi()
     }
     
     func setupWifi()
