@@ -345,7 +345,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
         var helper: SWComboxTitleHelper
         helper = SWComboxTitleHelper()
         
-        let list = BMRequestManager.sharedInstance.getFullOptionNames()
+        let list = BMRequestManager.sharedInstance.getGenreFullOptionNames()
         comboxViewGenre = SWComboxView.loadInstanceFromNibNamedToContainner(self.genreOptionsContainner)
         comboxViewGenre.bindData(list, comboxHelper: helper, seletedIndex: 0, comboxDelegate: self, containnerView: self.view)
         comboxViewGenre.delegate = self
@@ -368,7 +368,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     func selectedAtIndex(index:Int, combox: SWComboxView)
     {
         if combox == comboxViewGenre {
-            self.searchGenre = BMRequestManager.sharedInstance.getFullOptionIds()[index]
+            self.searchGenre = BMRequestManager.sharedInstance.getGenreFullOptionIds()[index]
             selectedGenre(self.searchGenre)
         }
         if combox == comboxViewYear

@@ -110,28 +110,8 @@ class BMRequestManager {
         return movies
     }
     
-    //Mark: - genre
-    func getFullOptionNames() -> [String]
-    {
-        var genreOps:[String] = [String]()
-        genreOps.append(defaultGenre.name)
-        for item in genres {
-            genreOps.append(item.name)
-        }
-        return genreOps
-    }
     
-    func getFullOptionIds() -> [String]
-    {
-        var genreOps:[String] = [String]()
-        genreOps.append(defaultGenre.id)
-        for item in genres {
-            genreOps.append(item.id)
-        }
-        return genreOps
-    }
-    
-
+    //MARK: - Discovery
     func discoveryParams(number: Int, sortType: SortType, key: String, genre: String, year: String) -> [String:AnyObject]
     {
         let sortString = (sortType == .PooPoo) ? "vote_count.asc" : "vote_count.desc"
@@ -184,4 +164,48 @@ class BMRequestManager {
         return dic
         
     }
+    
+    
+    //MARK: Genre
+    func getGenreOptionsNames(genre_ids:[String]) -> [String]
+    {
+        var genreOps:[String] = [String]()
+        genreOps.append(defaultGenre.name)
+        let genreArray = BMRequestManager.sharedInstance.genres
+        let filterGenre = genreArray.filter({genre_ids.contains($0.id) }).map{$0.name}
+        genreOps += filterGenre
+        return genreOps
+    }
+    
+    func getGenreOptionIdsWithNames(genre_ids:[String]) -> [String]
+    {
+        var genreOps:[String] = [String]()
+        genreOps.append(defaultGenre.id)
+        let genreArray = BMRequestManager.sharedInstance.genres
+        let filterGenre = genreArray.filter({genre_ids.contains($0.id) }).map{$0.name}
+        genreOps += filterGenre
+        return genreOps
+    }
+    
+    
+    func getGenreFullOptionNames() -> [String]
+    {
+        var genreOps:[String] = [String]()
+        genreOps.append(defaultGenre.name)
+        for item in genres {
+            genreOps.append(item.name)
+        }
+        return genreOps
+    }
+    
+    func getGenreFullOptionIds() -> [String]
+    {
+        var genreOps:[String] = [String]()
+        genreOps.append(defaultGenre.id)
+        for item in genres {
+            genreOps.append(item.id)
+        }
+        return genreOps
+    }
+    
 }
