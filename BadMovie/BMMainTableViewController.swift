@@ -123,6 +123,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     {
         let testNib = UINib(nibName: "TestCell", bundle: NSBundle.mainBundle())
         tableView.registerNib(testNib, forCellReuseIdentifier: "TestCell")
+        self.tableView.tableFooterView = UIView()
     }
     
     
