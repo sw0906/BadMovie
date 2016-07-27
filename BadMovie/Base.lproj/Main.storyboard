@@ -14,89 +14,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="rj2-1V-ams">
-                            <rect key="frame" x="0.0" y="64" width="600" height="96"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmL-Xi-34Q">
-                                    <rect key="frame" x="0.0" y="10" width="600" height="40"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IW6-72-M1S">
-                                            <rect key="frame" x="20" y="0.0" width="560" height="40"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPX-T6-B7I">
-                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="40"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqH-Aa-4eC">
-                                                    <rect key="frame" x="285" y="0.0" width="275" height="40"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="1YW-RR-64k"/>
-                                            </constraints>
-                                        </stackView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstItem="IW6-72-M1S" firstAttribute="leading" secondItem="cmL-Xi-34Q" secondAttribute="leading" constant="20" id="3hM-kY-JUJ"/>
-                                        <constraint firstAttribute="height" constant="40" id="F00-1W-Awa"/>
-                                        <constraint firstItem="IW6-72-M1S" firstAttribute="top" secondItem="cmL-Xi-34Q" secondAttribute="top" id="HSt-03-gxk"/>
-                                        <constraint firstAttribute="trailing" secondItem="IW6-72-M1S" secondAttribute="trailing" constant="20" id="UsT-E6-6bF"/>
-                                        <constraint firstAttribute="bottom" secondItem="IW6-72-M1S" secondAttribute="bottom" id="aVQ-ZH-w9s"/>
-                                    </constraints>
-                                </view>
-                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e9A-Cs-bkC">
-                                    <rect key="frame" x="20" y="58" width="560" height="29"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="284" id="0cW-2N-3Qf"/>
-                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="292" id="2Eg-Zr-Hmt"/>
-                                        <constraint firstAttribute="height" constant="28" id="8Ic-ZM-jZG"/>
-                                        <constraint firstAttribute="height" constant="28" id="DBC-iZ-Fr1"/>
-                                        <constraint firstAttribute="width" constant="292" id="LO0-ib-qjo"/>
-                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="XrA-gu-qwT"/>
-                                        <constraint firstAttribute="width" constant="284" id="maN-d6-Nbr"/>
-                                    </constraints>
-                                    <segments>
-                                        <segment title="Poplular"/>
-                                        <segment title="New"/>
-                                        <segment title="Top Sell"/>
-                                        <segment title="Top Rate"/>
-                                    </segments>
-                                    <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="0cW-2N-3Qf"/>
-                                            <exclude reference="2Eg-Zr-Hmt"/>
-                                            <exclude reference="DBC-iZ-Fr1"/>
-                                            <exclude reference="LO0-ib-qjo"/>
-                                            <exclude reference="XrA-gu-qwT"/>
-                                            <exclude reference="maN-d6-Nbr"/>
-                                        </mask>
-                                    </variation>
-                                    <connections>
-                                        <action selector="tapSort:" destination="jGz-lz-oR2" eventType="valueChanged" id="0Fh-R3-jyj"/>
-                                    </connections>
-                                </segmentedControl>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="e9A-Cs-bkC" firstAttribute="top" secondItem="cmL-Xi-34Q" secondAttribute="bottom" constant="8" id="8gG-Pd-Y0V"/>
-                                <constraint firstItem="e9A-Cs-bkC" firstAttribute="leading" secondItem="rj2-1V-ams" secondAttribute="leading" constant="20" id="AS3-YJ-va8"/>
-                                <constraint firstAttribute="bottom" secondItem="e9A-Cs-bkC" secondAttribute="bottom" constant="10" id="a3f-Oi-eXz"/>
-                                <constraint firstItem="e9A-Cs-bkC" firstAttribute="centerX" secondItem="cmL-Xi-34Q" secondAttribute="centerX" id="cK0-z2-5o2"/>
-                                <constraint firstAttribute="bottom" secondItem="e9A-Cs-bkC" secondAttribute="bottom" constant="10" id="gxU-02-FWS"/>
-                                <constraint firstItem="cmL-Xi-34Q" firstAttribute="top" secondItem="rj2-1V-ams" secondAttribute="top" constant="10" id="hzW-ko-xhM"/>
-                                <constraint firstAttribute="trailing" secondItem="cmL-Xi-34Q" secondAttribute="trailing" id="wie-3k-fcT"/>
-                                <constraint firstAttribute="trailing" secondItem="e9A-Cs-bkC" secondAttribute="trailing" constant="20" id="z6I-rN-9lv"/>
-                                <constraint firstItem="cmL-Xi-34Q" firstAttribute="leading" secondItem="rj2-1V-ams" secondAttribute="leading" id="zlV-dj-UGo"/>
-                            </constraints>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="a3f-Oi-eXz"/>
-                                </mask>
-                            </variation>
-                        </view>
                         <connections>
                             <outlet property="dataSource" destination="jGz-lz-oR2" id="pF3-M3-Ba3"/>
                             <outlet property="delegate" destination="jGz-lz-oR2" id="j5Z-aD-07S"/>
@@ -114,6 +31,89 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIk-Mj-IGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="rj2-1V-ams">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="96"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmL-Xi-34Q">
+                            <rect key="frame" x="0.0" y="10" width="600" height="40"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IW6-72-M1S">
+                                    <rect key="frame" x="20" y="0.0" width="560" height="40"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPX-T6-B7I">
+                                            <rect key="frame" x="0.0" y="0.0" width="275" height="40"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqH-Aa-4eC">
+                                            <rect key="frame" x="285" y="0.0" width="275" height="40"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="1YW-RR-64k"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="IW6-72-M1S" firstAttribute="leading" secondItem="cmL-Xi-34Q" secondAttribute="leading" constant="20" id="3hM-kY-JUJ"/>
+                                <constraint firstAttribute="height" constant="40" id="F00-1W-Awa"/>
+                                <constraint firstItem="IW6-72-M1S" firstAttribute="top" secondItem="cmL-Xi-34Q" secondAttribute="top" id="HSt-03-gxk"/>
+                                <constraint firstAttribute="trailing" secondItem="IW6-72-M1S" secondAttribute="trailing" constant="20" id="UsT-E6-6bF"/>
+                                <constraint firstAttribute="bottom" secondItem="IW6-72-M1S" secondAttribute="bottom" id="aVQ-ZH-w9s"/>
+                            </constraints>
+                        </view>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e9A-Cs-bkC">
+                            <rect key="frame" x="20" y="58" width="560" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="284" id="0cW-2N-3Qf"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="292" id="2Eg-Zr-Hmt"/>
+                                <constraint firstAttribute="height" constant="28" id="8Ic-ZM-jZG"/>
+                                <constraint firstAttribute="height" constant="28" id="DBC-iZ-Fr1"/>
+                                <constraint firstAttribute="width" constant="292" id="LO0-ib-qjo"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="XrA-gu-qwT"/>
+                                <constraint firstAttribute="width" constant="284" id="maN-d6-Nbr"/>
+                            </constraints>
+                            <segments>
+                                <segment title="Poplular"/>
+                                <segment title="New"/>
+                                <segment title="Top Sell"/>
+                                <segment title="Top Vote Count"/>
+                            </segments>
+                            <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="0cW-2N-3Qf"/>
+                                    <exclude reference="2Eg-Zr-Hmt"/>
+                                    <exclude reference="DBC-iZ-Fr1"/>
+                                    <exclude reference="LO0-ib-qjo"/>
+                                    <exclude reference="XrA-gu-qwT"/>
+                                    <exclude reference="maN-d6-Nbr"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="tapSort:" destination="jGz-lz-oR2" eventType="valueChanged" id="0Fh-R3-jyj"/>
+                            </connections>
+                        </segmentedControl>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="e9A-Cs-bkC" firstAttribute="top" secondItem="cmL-Xi-34Q" secondAttribute="bottom" constant="8" id="8gG-Pd-Y0V"/>
+                        <constraint firstItem="e9A-Cs-bkC" firstAttribute="leading" secondItem="rj2-1V-ams" secondAttribute="leading" constant="20" id="AS3-YJ-va8"/>
+                        <constraint firstAttribute="bottom" secondItem="e9A-Cs-bkC" secondAttribute="bottom" constant="10" id="a3f-Oi-eXz"/>
+                        <constraint firstItem="e9A-Cs-bkC" firstAttribute="centerX" secondItem="cmL-Xi-34Q" secondAttribute="centerX" id="cK0-z2-5o2"/>
+                        <constraint firstAttribute="bottom" secondItem="e9A-Cs-bkC" secondAttribute="bottom" constant="10" id="gxU-02-FWS"/>
+                        <constraint firstItem="cmL-Xi-34Q" firstAttribute="top" secondItem="rj2-1V-ams" secondAttribute="top" constant="10" id="hzW-ko-xhM"/>
+                        <constraint firstAttribute="trailing" secondItem="cmL-Xi-34Q" secondAttribute="trailing" id="wie-3k-fcT"/>
+                        <constraint firstAttribute="trailing" secondItem="e9A-Cs-bkC" secondAttribute="trailing" constant="20" id="z6I-rN-9lv"/>
+                        <constraint firstItem="cmL-Xi-34Q" firstAttribute="leading" secondItem="rj2-1V-ams" secondAttribute="leading" id="zlV-dj-UGo"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="a3f-Oi-eXz"/>
+                        </mask>
+                    </variation>
+                </view>
             </objects>
             <point key="canvasLocation" x="1261" y="1269"/>
         </scene>
@@ -300,6 +300,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="av1-7g-D2A">
+                            <rect key="frame" x="0.0" y="64" width="600" height="96"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjY-cO-JRo">
+                                    <rect key="frame" x="0.0" y="10" width="600" height="40"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Rs-iA-TFw">
+                                            <rect key="frame" x="20" y="0.0" width="560" height="40"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hx6-Lf-pzd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="40"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ke-fP-tyV">
+                                                    <rect key="frame" x="285" y="0.0" width="275" height="40"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="XD0-BM-VL1"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="CBk-qE-Xzn"/>
+                                        <constraint firstItem="3Rs-iA-TFw" firstAttribute="leading" secondItem="cjY-cO-JRo" secondAttribute="leading" constant="20" id="G0z-kQ-XU8"/>
+                                        <constraint firstAttribute="bottom" secondItem="3Rs-iA-TFw" secondAttribute="bottom" id="d0w-im-GIi"/>
+                                        <constraint firstAttribute="trailing" secondItem="3Rs-iA-TFw" secondAttribute="trailing" constant="20" id="gju-fb-81g"/>
+                                        <constraint firstItem="3Rs-iA-TFw" firstAttribute="top" secondItem="cjY-cO-JRo" secondAttribute="top" id="iY0-jw-LRL"/>
+                                    </constraints>
+                                </view>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZR5-Ok-3ip">
+                                    <rect key="frame" x="20" y="58" width="560" height="29"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="292" id="ERQ-BS-lme"/>
+                                        <constraint firstAttribute="width" constant="284" id="Hvr-7S-XIm"/>
+                                        <constraint firstAttribute="width" constant="292" id="JMC-MH-g14"/>
+                                        <constraint firstAttribute="height" constant="28" id="QNj-Hs-Dgl"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="ZBU-8r-tAc"/>
+                                        <constraint firstAttribute="height" constant="28" id="ZrR-Id-3fl"/>
+                                        <constraint firstAttribute="width" constant="284" id="auO-r1-ftD"/>
+                                    </constraints>
+                                    <segments>
+                                        <segment title="Poo Poo"/>
+                                        <segment title="Poo"/>
+                                        <segment title=""/>
+                                        <segment title=""/>
+                                    </segments>
+                                    <color key="tintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="ERQ-BS-lme"/>
+                                            <exclude reference="Hvr-7S-XIm"/>
+                                            <exclude reference="JMC-MH-g14"/>
+                                            <exclude reference="ZBU-8r-tAc"/>
+                                            <exclude reference="ZrR-Id-3fl"/>
+                                            <exclude reference="auO-r1-ftD"/>
+                                        </mask>
+                                    </variation>
+                                    <connections>
+                                        <action selector="tapSort:" destination="fNP-sh-JJ4" eventType="valueChanged" id="cOn-1P-Tbz"/>
+                                        <action selector="tapSort:" destination="jGz-lz-oR2" eventType="valueChanged" id="l5a-LH-CxH"/>
+                                    </connections>
+                                </segmentedControl>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="ZR5-Ok-3ip" secondAttribute="bottom" constant="10" id="Abz-he-yDg"/>
+                                <constraint firstItem="cjY-cO-JRo" firstAttribute="leading" secondItem="av1-7g-D2A" secondAttribute="leading" id="TZf-FE-qME"/>
+                                <constraint firstAttribute="trailing" secondItem="ZR5-Ok-3ip" secondAttribute="trailing" constant="20" id="Yts-5C-2tK"/>
+                                <constraint firstAttribute="trailing" secondItem="cjY-cO-JRo" secondAttribute="trailing" id="cPU-I5-C2q"/>
+                                <constraint firstItem="ZR5-Ok-3ip" firstAttribute="top" secondItem="cjY-cO-JRo" secondAttribute="bottom" constant="8" id="faQ-b5-HUL"/>
+                                <constraint firstItem="cjY-cO-JRo" firstAttribute="top" secondItem="av1-7g-D2A" secondAttribute="top" constant="10" id="iWE-ih-QYh"/>
+                                <constraint firstAttribute="bottom" secondItem="ZR5-Ok-3ip" secondAttribute="bottom" constant="10" id="koE-P1-cd7"/>
+                                <constraint firstItem="ZR5-Ok-3ip" firstAttribute="leading" secondItem="av1-7g-D2A" secondAttribute="leading" constant="20" id="l31-NH-A3o"/>
+                                <constraint firstItem="ZR5-Ok-3ip" firstAttribute="centerX" secondItem="cjY-cO-JRo" secondAttribute="centerX" id="p4L-le-iVg"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="koE-P1-cd7"/>
+                                </mask>
+                            </variation>
+                        </view>
                         <connections>
                             <outlet property="dataSource" destination="fNP-sh-JJ4" id="LxO-ly-7ZF"/>
                             <outlet property="delegate" destination="fNP-sh-JJ4" id="SKe-4i-EUe"/>
@@ -314,85 +398,6 @@
                         <segue destination="yAa-ac-MWA" kind="show" identifier="goDetail" id="bZV-4V-uJz"/>
                     </connections>
                 </tableViewController>
-                <view contentMode="scaleToFill" id="av1-7g-D2A">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="96"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjY-cO-JRo">
-                            <rect key="frame" x="0.0" y="10" width="600" height="40"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Rs-iA-TFw">
-                                    <rect key="frame" x="20" y="0.0" width="560" height="40"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hx6-Lf-pzd">
-                                            <rect key="frame" x="0.0" y="0.0" width="275" height="40"/>
-                                            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ke-fP-tyV">
-                                            <rect key="frame" x="285" y="0.0" width="275" height="40"/>
-                                            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="XD0-BM-VL1"/>
-                                    </constraints>
-                                </stackView>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="CBk-qE-Xzn"/>
-                                <constraint firstItem="3Rs-iA-TFw" firstAttribute="leading" secondItem="cjY-cO-JRo" secondAttribute="leading" constant="20" id="G0z-kQ-XU8"/>
-                                <constraint firstAttribute="bottom" secondItem="3Rs-iA-TFw" secondAttribute="bottom" id="d0w-im-GIi"/>
-                                <constraint firstAttribute="trailing" secondItem="3Rs-iA-TFw" secondAttribute="trailing" constant="20" id="gju-fb-81g"/>
-                                <constraint firstItem="3Rs-iA-TFw" firstAttribute="top" secondItem="cjY-cO-JRo" secondAttribute="top" id="iY0-jw-LRL"/>
-                            </constraints>
-                        </view>
-                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZR5-Ok-3ip">
-                            <rect key="frame" x="154" y="58" width="292" height="29"/>
-                            <constraints>
-                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="292" id="ERQ-BS-lme"/>
-                                <constraint firstAttribute="width" constant="284" id="Hvr-7S-XIm"/>
-                                <constraint firstAttribute="width" constant="292" id="JMC-MH-g14"/>
-                                <constraint firstAttribute="height" constant="28" id="QNj-Hs-Dgl"/>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="ZBU-8r-tAc"/>
-                                <constraint firstAttribute="height" constant="28" id="ZrR-Id-3fl"/>
-                                <constraint firstAttribute="width" constant="284" id="auO-r1-ftD"/>
-                            </constraints>
-                            <segments>
-                                <segment title="Poo Poo"/>
-                                <segment title="Poo"/>
-                            </segments>
-                            <color key="tintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="Hvr-7S-XIm"/>
-                                    <exclude reference="JMC-MH-g14"/>
-                                    <exclude reference="ZBU-8r-tAc"/>
-                                    <exclude reference="ZrR-Id-3fl"/>
-                                    <exclude reference="auO-r1-ftD"/>
-                                </mask>
-                            </variation>
-                            <connections>
-                                <action selector="tapSort:" destination="fNP-sh-JJ4" eventType="valueChanged" id="cOn-1P-Tbz"/>
-                                <action selector="tapSort:" destination="jGz-lz-oR2" eventType="valueChanged" id="l5a-LH-CxH"/>
-                            </connections>
-                        </segmentedControl>
-                    </subviews>
-                    <constraints>
-                        <constraint firstAttribute="bottom" secondItem="ZR5-Ok-3ip" secondAttribute="bottom" constant="10" id="Abz-he-yDg"/>
-                        <constraint firstItem="cjY-cO-JRo" firstAttribute="leading" secondItem="av1-7g-D2A" secondAttribute="leading" id="TZf-FE-qME"/>
-                        <constraint firstAttribute="trailing" secondItem="cjY-cO-JRo" secondAttribute="trailing" id="cPU-I5-C2q"/>
-                        <constraint firstItem="ZR5-Ok-3ip" firstAttribute="top" secondItem="cjY-cO-JRo" secondAttribute="bottom" constant="8" id="faQ-b5-HUL"/>
-                        <constraint firstItem="cjY-cO-JRo" firstAttribute="top" secondItem="av1-7g-D2A" secondAttribute="top" constant="10" id="iWE-ih-QYh"/>
-                        <constraint firstAttribute="bottom" secondItem="ZR5-Ok-3ip" secondAttribute="bottom" constant="10" id="koE-P1-cd7"/>
-                        <constraint firstItem="ZR5-Ok-3ip" firstAttribute="centerX" secondItem="cjY-cO-JRo" secondAttribute="centerX" id="p4L-le-iVg"/>
-                    </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="koE-P1-cd7"/>
-                        </mask>
-                    </variation>
-                </view>
                 <searchBar contentMode="redraw" showsCancelButton="YES" id="gMs-f1-v3r">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -433,6 +438,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lhu-6B-MEe"/>
+        <segue reference="bZV-4V-uJz"/>
     </inferredMetricsTieBreakers>
 </document>

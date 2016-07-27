@@ -126,7 +126,7 @@ class BMRequestManager {
         case .TopSell:
             sortS = "revenue.desc"
         case .TopRate:
-            sortS = "vote_average.desc"
+            sortS = "vote_count.desc"
         }
         return sortS
     }
