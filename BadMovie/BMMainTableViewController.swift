@@ -19,7 +19,7 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
     let filterItem:UIBarButtonItem = UIBarButtonItem()
     var movies:[MovieItem] = [MovieItem]()
     var sortMovies:[MovieItem] = [MovieItem]()
-    var sortType: SortType = .PooPoo
+    var sortType: SortType = .Popular
     var searchWords: String = ""
     var searchGenre: String = ""
     var searhYear : String = ""
@@ -134,10 +134,15 @@ class BMMainTableViewController: UITableViewController,SWComboxViewDelegate {
         switch sender.selectedSegmentIndex
         {
         case 0:
-            sortType = .PooPoo
+            sortType = .Popular
             break
         case 1:
-            sortType = .Poo
+            sortType = .New
+        case 2:
+            sortType = .TopSell
+            break
+        case 3:
+            sortType = .TopRate
         default:
             break;
         }

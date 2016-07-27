@@ -21,8 +21,10 @@ struct Genre {
 }
 
 enum SortType {
-    case PooPoo
-    case Poo
+    case Popular
+    case New
+    case TopSell
+    case TopRate
 }
 
 struct VideoItem {
@@ -112,9 +114,26 @@ class BMRequestManager {
     
     
     //MARK: - Discovery
+    func getSortString(sortType : SortType) -> String
+    {
+        var sortS:String = "popularity.desc"
+        
+        switch sortType {
+        case .Popular:
+            sortS = "popularity.desc"
+        case .New:
+            sortS = "release_date.desc"
+        case .TopSell:
+            sortS = "revenue.desc"
+        case .TopRate:
+            sortS = "vote_average.desc"
+        }
+        return sortS
+    }
+    
     func discoveryParams(number: Int, sortType: SortType, key: String, genre: String, year: String) -> [String:AnyObject]
     {
-        let sortString = (sortType == .PooPoo) ? "vote_count.asc" : "vote_count.desc"
+        let sortString = getSortString(sortType)//(sortType == .PooPoo) ? "vote_count.asc" : "vote_count.desc"
         
         if year == "" {
             let dic = ["page":String(number),

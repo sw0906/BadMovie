@@ -95,13 +95,17 @@ class BMSearchTableViewController: BMMainTableViewController, UISearchBarDelegat
     }
     
     override  func updateSortMovies() {
-        if sortType == SortType.PooPoo {
-            sortMovies = movies.sort { $0.vote_average.compare($1.vote_average) == .OrderedAscending }
+        switch sortType {
+        case .Popular:
+            sortMovies = movies.sort { $0.vote_count.compare($1.vote_count) == .OrderedDescending}
+        case .New:
+            sortMovies = movies.sort { $0.release_date.compare($1.release_date) == .OrderedDescending}
+        case .TopSell:
+            sortMovies = movies.sort { $0.vote_average.compare($1.vote_average) == .OrderedDescending}
+        case .TopRate:
+            sortMovies = movies.sort { $0.vote_average.compare($1.vote_average) == .OrderedDescending}
         }
-        else
-        {
-            sortMovies = movies.sort { $0.vote_average.compare($1.vote_average) == .OrderedDescending }
-        }
+        
         if searchGenre.characters.count > 0
         {
             sortMovies = sortMovies.filter({ $0.genre_ids!.contains(searchGenre) })
